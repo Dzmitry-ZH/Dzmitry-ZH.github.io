@@ -125,6 +125,7 @@ aside {
     background: url("../img/vvv-9.jpg") no-repeat fixed;
     background-size: contain;
     background-color: rgb(182, 182, 182);
+    z-index: 20;
 
 }
 
@@ -202,7 +203,7 @@ nav > ul li a {
 main {
     flex: 1 1 75%;
     background-color: #f3f3f3;
-    z-index: -100;
+    z-index: 10;
 
 }
 
@@ -361,6 +362,7 @@ main {
     margin: 0;
     box-sizing: border-box;
     width: 100%;
+    z-index: 25;
     background-color: #222222;
     height: 0;
     top: 20vw;
@@ -394,7 +396,7 @@ main {
     left: 5vw;
     margin-top: -2.5vw;
     cursor: pointer;
-    z-index: 3;
+    z-index: 25;
     width: 5vw;
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;

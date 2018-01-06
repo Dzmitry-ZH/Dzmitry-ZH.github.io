@@ -205,8 +205,22 @@
         min-height: 90%;
     }
 
+    .advantages, .share {
+        margin: 0;
+        padding: 3vw;
+    }
+
+    .share{
+        margin-top: 5vw;
+    }
+
     .advantages > span, .share > span {
         font-size: 4vw;
+    }
+
+    .text{
+        margin: 0;
+        margin-top: 5vw;
     }
 
     .text-block {
@@ -256,6 +270,19 @@
             line-height: 4vh;
         }
 
+        .advantages, .share {
+            margin: 0;
+            padding: 3vw;
+        }
+
+        .share{
+            margin-top: 5vw;
+        }
+
+        .text{
+            margin: 0;
+            margin-top: 5vw;
+        }
         .text-block {
             line-height: 4vw;
             font-size: 4vw;
