@@ -8,44 +8,67 @@
     font-weight: normal;
 }
 
-#p_prldr {
+.loaderArea {
+   background-color: white;
+    overflow: hidden;
     position: fixed;
     left: 0;
     top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #f7f9ff;
-    z-index: 30;
+    right:0;
+    bottom:0;
+    z-index: 100000;
 }
 
-.contpre small {
-    font-size: 4vw;
-    color: black;
-}
 
-.contpre {
-    width: 250px;
-    height: 100px;
+.loader {
+    height: 100%;
+    width:100%;
     position: absolute;
-    left: 50%;
+    left: 0;
+    top:0;
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    height: 4vw;
+    width: 4vw;
+    border: 0.6vw solid rgba(32, 0, 255, 0.62);
+    border-radius: 0.9vw;
+    position: absolute;
     top: 50%;
-    margin-left: -125px;
-    margin-top: -200px;
-    color: #fff;
-    font-size: 40px;
-    letter-spacing: -2px;
-    text-align: center;
-    line-height: 35px;
+    left: 50%;
+    margin-left: -2vw;
+    margin-top: -2vw;
 }
 
-#p_prldr .svg_anm {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: url(../img/pointless-bike-gif-dribbble.gif) center center no-repeat;
-    background-size: 500px;
-    margin-top: -10px;
-    margin-left: -100px;
+.loader:before {
+    animation: animate 2s infinite linear;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0) skew(0);
+    }
+
+    100% {
+        transform: rotate(180deg) skew(360deg);
+    }
+}
+
+
+.loader:after {
+    animation: animate2 2s infinite linear;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(0) skew(0);
+    }
+
+    100% {
+        transform: rotate(-180deg) skew(-360deg);
+    }
 }
 
 .up, .right, .bottom, .left {
@@ -173,6 +196,8 @@ nav > ul li a {
 
 main {
     flex: 1 1 75%;
+    background-color: #f3f3f3;
+    z-index: -100;
 
 }
 
@@ -241,14 +266,15 @@ main {
 .advantages, .share {
     margin: 2vw 4vw 2vw 2vw;
     text-align: center;
-    background-color: #f3f3f3;
+    background-color: white;
     padding: 2vw 0;
 }
 
 .advantages > span, .share > span{
     font-family: RalewayRegular;
     font-size: 3.5vw;
-    color: #990000;
+    /*color: #990000;*/
+    color:#222222;
 }
 
 .advantages > img {
