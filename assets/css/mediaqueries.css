@@ -1,0 +1,273 @@
+/* Table landscape*/
+@media screen and (max-width: 1024px) and (max-height: 768px) {
+    nav > ul li a {
+        font-size: 2.4vw;
+        font-family: RalewayRegular;
+        height: 4vw;
+        line-height: 4vw;
+        letter-spacing: 0.15vw;
+
+    }
+
+    .pigm1 {
+        min-height: 97%;
+    }
+
+    .logo {
+        height: 33vh;
+    }
+
+    .text-block {
+        width: 45vw;
+        color: white;
+        line-height: 2.5vw;
+        font-size: 2.2vw;
+    }
+
+    .text {
+        height: 65vw;
+    }
+}
+
+/*Portrait tablets and small desktops*/
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+    .up, .right, .bottom, .left {
+        display: none;
+    }
+
+    nav {
+        left: 0;
+        width: 25%;
+    }
+
+    nav > ul li a {
+        font-size: 3vw;
+        height: 6vw;
+        line-height: 6vw;
+        letter-spacing: 0.15vw;
+
+    }
+
+    .logo {
+        height: 10vh;
+    }
+
+    .slogan {
+        height: 20vh;
+    }
+
+    aside {
+        background-size: cover;
+
+    }
+
+    .advantages, .share {
+        margin: 4vw;
+    }
+
+    .text {
+        margin: 4vw;
+        margin-bottom: 0;
+        height: 60vw;
+    }
+
+    .text > p {
+        font-size: 3vw;
+    }
+
+    .text-block {
+        width: 50vw;
+        line-height: 4vw;
+        font-size: 2.8vw;
+    }
+
+    .slogan {
+        font-size: 4vw;
+    }
+
+    .advantages > span, .share > span {
+        font-size: 3.5vw;
+    }
+
+    .advantages ul li, .share > p {
+        font-size: 2.9vh;
+        line-height: 4.5vh;
+    }
+
+    #logo {
+        width: 15vw;
+    }
+
+}
+
+/*Small landscape tablets and small desktops*/
+@media screen and (max-width: 800px) and (max-height: 600px) {
+
+    #logo {
+        width: 15vw;
+    }
+
+    .logo {
+        height: 15vh;
+    }
+
+    .nav {
+        width: 25%;
+    }
+
+    nav > ul li a {
+        font-size: 2.5vw;
+        height: 5vw;
+        line-height: 5vw;
+        letter-spacing: 0.15vw;
+
+    }
+
+    .pigm1 {
+        min-height: 100%;
+    }
+
+    .slogan {
+        height: 55vh;
+    }
+
+    .advantages > span, .share > span {
+        font-size: 3vw;
+    }
+
+    .advantages ul li, .share > p {
+        font-size: 3.7vh;
+        line-height: 4.5vh;
+    }
+
+    .text {
+        height: 65vw;
+    }
+
+    .text-block {
+        width: 45vw;
+        line-height: 4vw;
+        font-size: 2.5vw;
+    }
+
+}
+
+/*Small tablets portrait*/
+@media screen and (max-width: 600px) and (max-height: 800px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    aside {
+        height: 20vw;
+        width: 100%;
+        background-color: #222222;
+        background-image: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    main {
+        margin-top: 20vw;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #logo {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin: 0 auto;
+        width: 20vw;
+        margin-left: -10vw;
+    }
+
+    .title::before {
+        left: 15%;
+    }
+
+    .title::after {
+        right: 15%;
+    }
+
+    .title > span {
+        font-size: 7vw;
+    }
+
+    .slogan {
+        font-size: 5vw;
+    }
+
+    .pigm1 {
+        min-height: 90%;
+    }
+
+    .advantages > span, .share > span {
+        font-size: 4vw;
+    }
+
+    .text-block {
+        width: 70%;
+        line-height: 4vw;
+        font-size: 3vw;
+    }
+
+    .btn-menu {
+        display: block;
+    }
+}
+    /*Mobile portrait portrait and smaller*/
+    @media screen and (max-width: 320px) and (max-height: 480px) {
+
+        .btn-menu span {
+            height: 1px;
+        }
+
+        .hidden-menu-ticker:checked ~ .btn-menu span.first {
+            -webkit-transform: rotate(45deg);
+            top: 6px;
+        }
+        .hidden-menu-ticker:checked ~ .btn-menu span.second {
+            opacity: 0;
+        }
+
+        .hidden-menu-ticker:checked ~ .btn-menu span.third {
+            -webkit-transform: rotate(-45deg);
+            top: -6px;
+        }
+
+        .pigm1 {
+            min-height: 90%;
+        }
+
+        .slogan {
+            height: 20vh;
+        }
+
+        .advantages > span, .share > span {
+            font-size: 5vw;
+        }
+
+        .advantages ul li, .share > p {
+            font-size: 3vh;
+            line-height: 4vh;
+        }
+
+        .text-block {
+            line-height: 4vw;
+            font-size: 4vw;
+            width: 80%;
+        }
+
+        .text {
+            height: 75vw;
+        }
+
+        .text>p{
+            font-size: 4.3vw;
+        }
+
+    }

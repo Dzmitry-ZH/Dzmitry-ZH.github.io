@@ -31,15 +31,15 @@
 .loader:before,
 .loader:after {
     content: "";
-    height: 4vw;
-    width: 4vw;
+    height: 6vw;
+    width: 6vw;
     border: 0.6vw solid rgba(32, 0, 255, 0.62);
-    border-radius: 0.9vw;
+    border-radius: 1.9vw;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -2vw;
-    margin-top: -2vw;
+    margin-left: -3vw;
+    margin-top: -3vw;
 }
 
 .loader:before {
@@ -111,9 +111,13 @@ body, html, nav > ul {
     overflow-x: hidden;
 }
 
+.btn-menu{
+    display: none;
+}
+
 .wrapper {
     display: flex;
-    width: 100%;
+    transition: margin-top .5s;
 }
 
 aside {
@@ -182,6 +186,7 @@ nav > ul li a {
     top: 0;
     left: 0;
     z-index: -100;
+    transition: margin-top .5s;
 }
 
 .pigm1 {
@@ -347,4 +352,85 @@ main {
     margin: 0 auto;
     line-height: 2vw;
     font-size: 1.7vw;
+}
+
+.hidden-menu {
+    position: absolute;
+    list-style:none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #222222;
+    height: 0;
+    top: 20vw;
+    left:0;
+    transition: height .5s;
+    overflow: hidden;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+
+.hidden-menu li a{
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: RalewayRegular;
+    font-size: 4vw;
+    height: 6vw;
+    line-height: 6vw;
+    letter-spacing: 0.15vw;
+}
+
+
+.hidden-menu-ticker {
+    display: none;
+}
+.btn-menu {
+    background-color: #222222;
+    position: absolute;
+    top: 10vw;
+    left: 5vw;
+    margin-top: -2.5vw;
+    cursor: pointer;
+    z-index: 3;
+    width: 5vw;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+.btn-menu span {
+    display: block;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px 0 0;
+    transition: all .1s linear .23s;
+    position: relative;
+}
+.btn-menu span.first {
+    margin-top: 0;
+}
+
+.hidden-menu-ticker:checked ~ .hidden-menu {
+    height: 30vw;
+}
+
+.hidden-menu-ticker:checked ~ .wrapper,
+.hidden-menu-ticker:checked ~ .wrapper .pigm1
+{
+    margin-top: 30vw;
+}
+
+
+.hidden-menu-ticker:checked ~ .btn-menu span.first {
+    -webkit-transform: rotate(45deg);
+    top: 10px;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.second {
+    opacity: 0;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu span.third {
+    -webkit-transform: rotate(-45deg);
+    top: -10px;
 }
