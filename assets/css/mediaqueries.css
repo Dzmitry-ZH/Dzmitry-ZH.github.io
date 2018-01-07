@@ -27,6 +27,19 @@
     .text {
         height: 65vw;
     }
+
+    .price-cost {
+        height: 14vw;
+    }
+
+    .service-list p {
+        font-size: 2.2vw;
+    }
+
+    .service-list p:nth-of-type(2) {
+        font-size: 1.9vw;
+    }
+
 }
 
 /*Portrait tablets and small desktops*/
@@ -65,6 +78,10 @@
         margin: 4vw;
     }
 
+    .service-title, .service-list, .map{
+        margin: 2vw;
+    }
+
     .text {
         margin: 4vw;
         margin-bottom: 0;
@@ -85,7 +102,7 @@
         font-size: 4vw;
     }
 
-    .advantages > span, .share > span {
+    .advantages > span, .share > span, .service-title > span {
         font-size: 3.5vw;
     }
 
@@ -96,6 +113,22 @@
 
     #logo {
         width: 15vw;
+    }
+
+    .price-cost {
+        height: 22vw;
+    }
+
+    .service-list p {
+        font-size: 2.5vw;
+    }
+
+    .service-list p:nth-of-type(2) {
+        font-size: 2vw;
+    }
+
+    .service-list ul li {
+        font-size: 2vw;
     }
 
 }
@@ -131,7 +164,7 @@
         height: 55vh;
     }
 
-    .advantages > span, .share > span {
+    .advantages > span, .share > span, .service-title > span {
         font-size: 3vw;
     }
 
@@ -148,6 +181,14 @@
         width: 45vw;
         line-height: 4vw;
         font-size: 2.5vw;
+    }
+
+    .price-cost {
+        height: 15vw;
+    }
+
+    .service-list ul li {
+        font-size: 2vw;
     }
 
 }
@@ -205,20 +246,20 @@
         min-height: 90%;
     }
 
-    .advantages, .share {
+    .advantages, .share, .service-title, .service-list, .map {
         margin: 0;
         padding: 3vw;
     }
 
-    .share{
+    .share {
         margin-top: 5vw;
     }
 
-    .advantages > span, .share > span {
+    .advantages > span, .share > span, .service-title > span {
         font-size: 4vw;
     }
 
-    .text{
+    .text {
         margin: 0;
         margin-top: 5vw;
     }
@@ -232,69 +273,94 @@
     .btn-menu {
         display: block;
     }
+
+.pigm3{
+    background-position: 0 -15vw;
+    background-repeat: no-repeat;
 }
-    /*Mobile portrait portrait and smaller*/
-    @media screen and (max-width: 320px) and (max-height: 480px) {
 
-        .btn-menu span {
-            height: 1px;
-        }
-
-        .hidden-menu-ticker:checked ~ .btn-menu span.first {
-            -webkit-transform: rotate(45deg);
-            top: 6px;
-        }
-        .hidden-menu-ticker:checked ~ .btn-menu span.second {
-            opacity: 0;
-        }
-
-        .hidden-menu-ticker:checked ~ .btn-menu span.third {
-            -webkit-transform: rotate(-45deg);
-            top: -6px;
-        }
-
-        .pigm1 {
-            min-height: 90%;
-        }
-
-        .slogan {
-            height: 20vh;
-        }
-
-        .advantages > span, .share > span {
-            font-size: 5vw;
-        }
-
-        .advantages ul li, .share > p {
-            font-size: 3vh;
-            line-height: 4vh;
-        }
-
-        .advantages, .share {
-            margin: 0;
-            padding: 3vw;
-        }
-
-        .share{
-            margin-top: 5vw;
-        }
-
-        .text{
-            margin: 0;
-            margin-top: 5vw;
-        }
-        .text-block {
-            line-height: 4vw;
-            font-size: 4vw;
-            width: 80%;
-        }
-
-        .text {
-            height: 75vw;
-        }
-
-        .text>p{
-            font-size: 4.3vw;
-        }
-
+    .service-list p{
+        font-size: 3.5vw;
     }
+
+    .service-list p:nth-of-type(2){
+        font-size: 2.8vw;
+    }
+
+    .service-list ul li {
+        font-size: 2.5vw;
+    }
+
+}
+
+/*Mobile portrait portrait and smaller*/
+@media screen and (max-width: 320px) and (max-height: 480px) {
+
+    .btn-menu span {
+        height: 1px;
+    }
+
+    .hidden-menu-ticker:checked ~ .btn-menu span.first {
+        -webkit-transform: rotate(45deg);
+        top: 6px;
+    }
+
+    .hidden-menu-ticker:checked ~ .btn-menu span.second {
+        opacity: 0;
+    }
+
+    .hidden-menu-ticker:checked ~ .btn-menu span.third {
+        -webkit-transform: rotate(-45deg);
+        top: -6px;
+    }
+
+    .pigm1 {
+        min-height: 100%;
+    }
+
+    .slogan {
+        height: 20vh;
+    }
+
+    .advantages > span, .share > span {
+        font-size: 5vw;
+    }
+
+    .advantages ul li, .share > p {
+        font-size: 3vh;
+        line-height: 4vh;
+    }
+
+    .advantages, .share, .service-title, .service-list, .map {
+        margin: 0;
+        padding: 3vw;
+    }
+
+    .share {
+        margin-top: 5vw;
+    }
+
+    .text {
+        margin: 0;
+        margin-top: 5vw;
+    }
+
+    .text-block {
+        line-height: 4vw;
+        font-size: 4vw;
+        width: 80%;
+    }
+
+    .text {
+        height: 75vw;
+    }
+
+    .text > p {
+        font-size: 4.3vw;
+    }
+
+    .price-cost {
+        height: 24vw;
+    }
+
+}
