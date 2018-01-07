@@ -178,7 +178,7 @@ nav > ul li a {
 
 }
 
-.pigm1, .pigm2 {
+.pigm1, .pigm2, .pigm3 {
     min-height: 100%;
     width: 100%;
     position: absolute;
@@ -195,6 +195,11 @@ nav > ul li a {
 
 .pigm2 {
     background: url("../img/pigm2.jpg") fixed;
+    background-size: cover;
+}
+
+.pigm3 {
+    background: url("../img/pigm3.jpg") fixed;
     background-size: cover;
 }
 
@@ -280,21 +285,22 @@ main, .service {
     margin-top: 5vw;
 }
 
-.advantages, .share {
+.advantages, .share, .service-list, .service-title, .map{
     margin: 2vw 4vw 2vw 2vw;
     text-align: center;
     background-color: white;
     padding: 2vw 0;
 }
 
-.advantages > span, .share > span {
+.advantages > span, .share > span, .service-title>span {
     font-family: RalewayRegular;
     font-size: 3.5vw;
     /*color: #990000;*/
     color: #222222;
 }
 
-.advantages > img {
+.advantages > img,
+.service-title > img{
     width: 14vw;
     display: block;
     margin: 0 auto;
@@ -310,7 +316,7 @@ main, .service {
 
 }
 
-.advantages ul li, .share > p {
+.advantages ul li, .share > p, .service-list ul li{
     list-style-position: inside;
     list-style-type: decimal;
     color: #666;
@@ -447,4 +453,13 @@ main, .service {
 .hidden-menu-ticker:checked ~ .btn-menu span.third {
     -webkit-transform: rotate(-45deg);
     top: -10px;
+}
+iframe{
+    width: 100%;
+    height: 30vw;
+}
+.map{
+    margin-top: 0;
+    padding: 2vw;
+    padding-top: 0;
 }
