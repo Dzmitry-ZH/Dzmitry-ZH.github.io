@@ -178,7 +178,7 @@ nav > ul li a {
 
 }
 
-.pigm1, .pigm2, .pigm3 {
+.pigm1, .pigm2, .pigm3, .pigm4 {
     min-height: 100%;
     width: 100%;
     position: absolute;
@@ -203,6 +203,11 @@ nav > ul li a {
     background-size: cover;
 }
 
+.pigm4 {
+    background: url("../img/pigm4.jpg") fixed;
+    background-size: cover;
+}
+
 section {
     display: flex;
     flex: 1 1 75%;
@@ -210,7 +215,7 @@ section {
     overflow: hidden;
 }
 
-main, .service {
+main, .service, .about-us {
     transition: transform 1s;
     background-color: #f3f3f3;
     z-index: 10;
@@ -285,7 +290,7 @@ main, .service {
     margin-top: 5vw;
 }
 
-.advantages, .share, .service-list, .service-title, .map{
+.advantages, .share, .service-list, .service-title, .map, .png{
     margin: 2vw 4vw 2vw 2vw;
     text-align: center;
     background-color: white;
@@ -299,8 +304,7 @@ main, .service {
     color: #222222;
 }
 
-.advantages > img,
-.service-title > img{
+.arrow{
     width: 14vw;
     display: block;
     margin: 0 auto;
@@ -334,7 +338,7 @@ main, .service {
     text-align: justify;
 }
 
-.share > img {
+.share:first-child > img {
     width: 90%;
 }
 
@@ -526,3 +530,27 @@ iframe{
     padding-top: 0;
 }
 
+
+/*About us*//*About us*//*About us*//*About us*/
+
+.png{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    padding-bottom: 0;
+}
+
+.png > .png-block{
+    flex-basis: 20%;
+}
+
+.share.without_margin{
+    margin-bottom: 0;
+}
+
+.png-block{
+    padding:2vw;
+    color: #666;
+    font-size: 1.5vw;
+    line-height: 4vh;
+}
