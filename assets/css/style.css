@@ -290,7 +290,7 @@ main, .service, .about-us {
     margin-top: 5vw;
 }
 
-.advantages, .share, .service-list, .service-title, .map, .png{
+.advantages, .share, .service-list, .service-title, .map, .png, .gallery{
     margin: 2vw 4vw 2vw 2vw;
     text-align: center;
     background-color: white;
@@ -540,9 +540,6 @@ iframe{
     padding-bottom: 0;
 }
 
-.png > .png-block{
-    flex-basis: 20%;
-}
 
 .share.without_margin{
     margin-bottom: 0;
@@ -553,4 +550,102 @@ iframe{
     color: #666;
     font-size: 1.5vw;
     line-height: 4vh;
+    flex-basis: 20%;
+}
+
+.png-block .benefit{
+    width: 8.5vw;
+}
+
+
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2vw;
+    margin-top: 0;
+
+}
+
+
+.gallery .item{
+    flex-basis: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery .item:hover .describe{
+    transition: .5s;
+    transform: scale(1);
+}
+
+.describe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height:100%;
+    transform: scale(0);
+    color: white;
+    text-align: center;
+    font-size: 2vw;
+    vertical-align: center;
+    padding-top: 25%;
+    z-index: 9999999999;
+}
+
+.gallery img{
+    width: 100%;
+}
+
+.mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close{
+    cursor: pointer;
+}
+
+.mfp-image-holder .mfp-close{
+    position: absolute;
+    top: 3vw;
+    left: -1vw;
+}
+
+.mfp-counter{
+    top: -.5vw;
+}
+
+.mfp-fade.mfp-bg {
+    opacity: 0;
+
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+    opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+    transform: scale(0);
+
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+    transform: scale(1);
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    opacity: 0;
 }
