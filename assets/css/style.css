@@ -9,23 +9,22 @@
 }
 
 .loaderArea {
-   background-color: white;
+    background-color: white;
     overflow: hidden;
     position: fixed;
     left: 0;
     top: 0;
-    right:0;
-    bottom:0;
+    right: 0;
+    bottom: 0;
     z-index: 100000;
 }
 
-
 .loader {
     height: 100%;
-    width:100%;
+    width: 100%;
     position: absolute;
     left: 0;
-    top:0;
+    top: 0;
 }
 
 .loader:before,
@@ -55,7 +54,6 @@
         transform: rotate(180deg) skew(360deg);
     }
 }
-
 
 .loader:after {
     animation: animate2 2s infinite linear;
@@ -111,7 +109,7 @@ body, html, nav > ul {
     overflow-x: hidden;
 }
 
-.btn-menu{
+.btn-menu {
     display: none;
 }
 
@@ -200,10 +198,23 @@ nav > ul li a {
     background-size: cover;
 }
 
-main {
+section {
+    display: flex;
     flex: 1 1 75%;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+main, .service {
+    transition: transform 1s;
     background-color: #f3f3f3;
     z-index: 10;
+}
+
+.hide {
+    height: 0;
+    transform: scale(0);
+    transition: 2s;
 
 }
 
@@ -276,11 +287,11 @@ main {
     padding: 2vw 0;
 }
 
-.advantages > span, .share > span{
+.advantages > span, .share > span {
     font-family: RalewayRegular;
     font-size: 3.5vw;
     /*color: #990000;*/
-    color:#222222;
+    color: #222222;
 }
 
 .advantages > img {
@@ -357,7 +368,7 @@ main {
 
 .hidden-menu {
     position: absolute;
-    list-style:none;
+    list-style: none;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -366,14 +377,14 @@ main {
     background-color: #222222;
     height: 0;
     top: 20vw;
-    left:0;
+    left: 0;
     transition: height .5s;
     overflow: hidden;
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
 }
 
-.hidden-menu li a{
+.hidden-menu li a {
     color: #ffffff;
     display: block;
     text-align: center;
@@ -385,10 +396,10 @@ main {
     letter-spacing: 0.15vw;
 }
 
-
 .hidden-menu-ticker {
     display: none;
 }
+
 .btn-menu {
     background-color: #222222;
     position: absolute;
@@ -401,6 +412,7 @@ main {
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
 }
+
 .btn-menu span {
     display: block;
     height: 5px;
@@ -409,6 +421,7 @@ main {
     transition: all .1s linear .23s;
     position: relative;
 }
+
 .btn-menu span.first {
     margin-top: 0;
 }
@@ -418,16 +431,15 @@ main {
 }
 
 .hidden-menu-ticker:checked ~ .wrapper,
-.hidden-menu-ticker:checked ~ .wrapper .pigm1
-{
+.hidden-menu-ticker:checked ~ .wrapper .pigm1 {
     margin-top: 30vw;
 }
-
 
 .hidden-menu-ticker:checked ~ .btn-menu span.first {
     -webkit-transform: rotate(45deg);
     top: 10px;
 }
+
 .hidden-menu-ticker:checked ~ .btn-menu span.second {
     opacity: 0;
 }

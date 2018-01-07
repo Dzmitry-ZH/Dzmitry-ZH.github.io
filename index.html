@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
-	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Веломастерская - ВелаМайстар</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/mediaqueries.css">
-    <script src="assets/js/jquery-3.2.1.min.js"></script>
 </head>
 <body>
 <div class="loaderArea">
@@ -18,30 +17,31 @@
 <div class="right"></div>
 <div class="bottom"></div>
 <div class="left"></div>
-    <input type="checkbox" id="hmt" class="hidden-menu-ticker">
-    <label class="btn-menu" for="hmt">
-        <span class="first"></span>
-        <span class="second"></span>
-        <span class="third"></span>
-    </label>
-    <ul class="hidden-menu">
-        <li><a href="https://smart.tut.by/" target="_blank">Главная</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Clients</a></li>
-        <li><a href="#">Контакты</a></li>
-    </ul>
+<input type="checkbox" id="hmt" class="hidden-menu-ticker">
+<label class="btn-menu" for="hmt">
+    <span class="first"></span>
+    <span class="second"></span>
+    <span class="third"></span>
+</label>
+<ul class="hidden-menu">
+    <li id="main1"><a href="#Main">Главная</a></li>
+    <li id="service1"><a href="#Service">Услуги</a></li>
+    <li><a href="#">Clients</a></li>
+    <li><a href="#">Контакты</a></li>
+</ul>
 <div class="wrapper">
     <aside>
         <img src="assets/img/Logo.gif" alt="Не удалось загрузить" id="logo">
         <nav>
             <ul>
-                <li><a href="https://www.tut.by/" target="_blank">Главная</a></li>
-                <li><a href="#">About us</a></li>
+                <li id="main"><a href="#Main">Главная</a></li>
+                <li id="service"><a href="#Service">Услуги</a></li>
                 <li><a href="#">Clients</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>
         </nav>
     </aside>
+    <section>
     <main>
         <div class="pigm1"></div>
         <div class="logo wow fadeInLeft" data-wow-duration="1.8s"></div>
@@ -87,8 +87,9 @@
             </div>
             <div class="text-block">
                 <p>Действительно самый большой выбор запчастей в Минске.
-               Плохого качества запчастей у них нет. Может по интернету и можно найти дешевле но растаможка все съедает.
-                Ну и радуют бонусы владельцам карт. Жаль, что скидки зачастую только в выходные.</p>
+                    Плохого качества запчастей у них нет. Может по интернету и можно найти дешевле но растаможка все
+                    съедает.
+                    Ну и радуют бонусы владельцам карт. Жаль, что скидки зачастую только в выходные.</p>
                 <p>Александр</p>
             </div>
             <div class="text-block">
@@ -104,7 +105,8 @@
             <div class="text-block">
                 <p>Привет братваааааа. Это очень крутой магаз!
                     Являюсь постоянным клиентом данного магазина, нормальные цены и товар!!!
-                    Если считать с германии заказывать с налогом или тут купить то я считаю лучше тут и быстрее и цена одинаковая
+                    Если считать с германии заказывать с налогом или тут купить то я считаю лучше тут и быстрее и цена
+                    одинаковая
                     выйдет! В магазине работают действительно очень умные и отзывчивые мастера!!!
                     Люди готовы помочь с любым вопросом и товаром.
                 </p>
@@ -112,7 +114,12 @@
             <div class="pigm2"></div>
         </div>
     </main>
+        <div class="service hide">
+
+        </div>
+    </section>
 </div>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
 <script src="assets/js/wow.min.js"></script>
 <script src="assets/js/script.js"></script>
 </body>

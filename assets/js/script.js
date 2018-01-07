@@ -5,6 +5,43 @@ $(window).on('load', function () {
     $preloader.delay(350).fadeOut('slow');
 });
 
+$(function () {
+
+    $('#main').on('click', function () {
+        show($("main"));
+        hide($(".service"));
+    });
+
+    $('#service').on('click', function () {
+        show($(".service"));
+        hide($("main"));
+
+    });
+
+    $('#main1').on('click', function () {
+        show($("main"));
+        hide($(".service"));
+    });
+
+    $('#service1').on('click', function () {
+        show($(".service"));
+        hide($("main"));
+
+    });
+
+
+    function show(element) {
+        element.removeClass("hide");
+
+    }
+
+    function hide(element) {
+        element.addClass("hide");
+    }
+
+});
+
+
 new WOW().init();
 
 $(document).ready(function() {
