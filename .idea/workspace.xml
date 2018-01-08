@@ -2,9 +2,89 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af857d97-ba5f-465a-b48c-d365cb81cf35" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/assets/css/animate.css" afterPath="$PROJECT_DIR$/assets/css/animate.css" />
+      <change beforePath="$PROJECT_DIR$/assets/css/magnific-popup.css" afterPath="$PROJECT_DIR$/assets/css/magnific-popup.css" />
       <change beforePath="$PROJECT_DIR$/assets/css/mediaqueries.css" afterPath="$PROJECT_DIR$/assets/css/mediaqueries.css" />
       <change beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/assets/js/script.js" afterPath="$PROJECT_DIR$/assets/js/script.js" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTC55F_W.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTC55F_W.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTC55F_W.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTC55F_W.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PT Free Font License_eng_1.2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PT Free Font License_rus_1.2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTC55F_W.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTC55F_W.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTC55F_W.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTC55F_W.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTC55F_demo.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTC55F_stylesheet.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTC75F_W.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTC75F_W.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTC75F_W.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTC75F_W.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTC75F_demo.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTC75F_stylesheet.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTN57F_W.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTN57F_W.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTN57F_W.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTN57F_W.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTN57F_demo.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTN57F_stylesheet.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTN77F_W.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTN77F_W.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTN77F_W.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTN77F_W.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTN77F_demo.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTN77F_stylesheet.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS55F_W.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS55F_W.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS55F_W.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS55F_W.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS55F_demo.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS55F_stylesheet.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS56F_W.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS56F_W.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS56F_W.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS56F_W.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS56F_demo.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS56F_stylesheet.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS75F_W.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS75F_W.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS75F_W.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS75F_W.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS75F_demo.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS75F_stylesheet.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS76F_W.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS76F_W.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS76F_W.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS76F_W.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS76F_demo.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/PTS76F_stylesheet.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/demo.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/PTSansWeb/stylesheet.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/0_925f1_11427616_orig.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/32764888633_5e797149ca_k.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/32764888633_db46789091_z.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/34378167170_be43601df6_k.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/5877531_xlarge.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/Velomasterskaya-v-Gomele-Logo-1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/alm-friuli-snow-snowfall-45204.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/banner.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/bck1.1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/bck1.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/bck1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/devushka-na-velosipede-v-pole.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/orginal.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/original.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/pexels-photo-730130.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/pexels-photo.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/pointless-bike-gif-dribbble.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/transport.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/vvv-10.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/assets/img/vvv-8.jpg" afterPath="" />
       <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,46 +99,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="82" column="60" lean-forward="false" selection-start-line="82" selection-start-column="60" selection-end-line="82" selection-end-column="60" />
-              <folding>
-                <element signature="n#div#0;n#section#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#section#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#12442#12449#0" expanded="true" />
-                <element signature="e#12462#12469#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="652" column="16" lean-forward="false" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="65" column="29" lean-forward="false" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mediaqueries.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/css/mediaqueries.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="120" column="33" lean-forward="false" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="33" />
+            <state relative-caret-position="2941">
+              <caret line="173" column="5" lean-forward="false" selection-start-line="173" selection-start-column="1" selection-end-line="173" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -71,11 +116,16 @@
       <find>.share &gt; p</find>
       <find>service</find>
       <find>main</find>
-      <find>img</find>
       <find>arrow</find>
       <find>first</find>
       <find>.about</find>
       <find>.share &gt; p</find>
+      <find>.ma</find>
+      <find>margin</find>
+      <find>.map</find>
+      <find>min-height</find>
+      <find>logo</find>
+      <find>img</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -85,9 +135,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/assets/js/script.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/assets/css/animate.css" />
+        <option value="$PROJECT_DIR$/assets/css/magnific-popup.css" />
         <option value="$PROJECT_DIR$/assets/css/mediaqueries.css" />
+        <option value="$PROJECT_DIR$/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -182,12 +234,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515375548251</updated>
-      <workItem from="1515375554316" duration="947000" />
+      <workItem from="1515375554316" duration="2674000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="947000" />
+    <option name="totallyTimeSpent" value="2674000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
@@ -223,27 +275,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="82" column="60" lean-forward="false" selection-start-line="82" selection-start-column="60" selection-end-line="82" selection-end-column="60" />
-          <folding>
-            <element signature="n#div#0;n#section#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#section#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#12442#12449#0" expanded="true" />
-            <element signature="e#12462#12469#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="652" column="16" lean-forward="false" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="651">
@@ -254,8 +285,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/mediaqueries.css">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="435" column="1" lean-forward="false" selection-start-line="435" selection-start-column="1" selection-end-line="435" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/magnific-popup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="359" column="27" lean-forward="false" selection-start-line="359" selection-start-column="27" selection-end-line="359" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/animate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="3399" column="1" lean-forward="false" selection-start-line="3399" selection-start-column="1" selection-end-line="3399" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="120" column="33" lean-forward="false" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="33" />
+          <caret line="195" column="20" lean-forward="false" selection-start-line="195" selection-start-column="17" selection-end-line="195" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2941">
+          <caret line="173" column="5" lean-forward="false" selection-start-line="173" selection-start-column="1" selection-end-line="173" selection-end-column="5" />
           <folding />
         </state>
       </provider>

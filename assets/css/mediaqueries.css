@@ -48,6 +48,10 @@
         top: 3.5vw;
         left: -.5vw;
     }
+
+    .contacts .share {
+        margin-top: -5vw;
+    }
 }
 
 /*Portrait tablets and small desktops*/
@@ -82,7 +86,7 @@
 
     }
 
-    .advantages, .share, .gallery, .png {
+    .advantages, .share, .png, .map, .gallery, .share .contacts  {
         margin: 4vw;
     }
 
@@ -150,6 +154,11 @@
     .mfp-image-holder .mfp-close{
         top: 5vw;
     }
+
+    .contacts .share {
+        margin-top: 4vw;
+        padding-bottom: 4vw;
+    }
 }
 
 /*Small landscape tablets and small desktops*/
@@ -215,6 +224,9 @@
 /*Small tablets portrait*/
 @media screen and (max-width: 600px) and (max-height: 800px) {
     .wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
@@ -293,10 +305,10 @@
         display: block;
     }
 
-.pigm3{
-    background-position: 0 -15vw;
-    background-repeat: no-repeat;
-}
+    .pigm3{
+        background-position: 0 -15vw;
+        background-repeat: no-repeat;
+    }
 
     .service-list p{
         font-size: 3.5vw;
@@ -313,6 +325,7 @@
     .png-block{
         font-size: 2.5vw;
         line-height: 3vh;
+        -ms-flex-preferred-size: 40%;
         flex-basis: 40%;
     }
 
@@ -321,7 +334,10 @@
     }
 
     .png{
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
 
@@ -400,6 +416,7 @@
     .png-block{
         font-size: 2.5vw;
         line-height: 3vh;
+        -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
     }
 
@@ -408,7 +425,10 @@
     }
 
     .png{
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
 
