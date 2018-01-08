@@ -11,12 +11,15 @@ $(function () {
         show($("main"));
         hide($(".service"));
         hide($('.about-us'));
+        hide($('.contacts'));
     });
 
     $('#service').on('click', function () {
         show($(".service"));
         hide($("main"));
         hide($('.about-us'));
+        hide($('.contacts'));
+
 
     });
 
@@ -24,23 +27,43 @@ $(function () {
         show($('.about-us'));
         hide($('main'));
         hide($('.service'));
+        hide($('.contacts'));
+
+    });
+
+    $('#contacts').on('click', function () {
+        show($('.contacts'));
+        hide($('main'));
+        hide($('.service'));
+        hide($('.about-us'));
+
     });
 
     $('#main1').on('click', function () {
         show($("main"));
         hide($(".service"));
         hide($('.about-us'));
+        hide($('.contacts'));
     });
 
     $('#service1').on('click', function () {
         show($(".service"));
         hide($("main"));
         hide($('.about-us'));
+        hide($('.contacts'));
 
         $('#about-us1').on('click', function () {
             show($('.about-us'));
             hide($('main'));
             hide($('.service'));
+            hide($('.contacts'));
+        });
+
+        $('#contacts1').on('click', function () {
+            show($('.contacts'));
+            hide($('main'));
+            hide($('.service'));
+            hide($('.about-us'));
         });
 
     });

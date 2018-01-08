@@ -118,7 +118,7 @@
         font-size: 3.5vw;
     }
 
-    .advantages ul li, .share > p {
+    .advantages ul li, .share > p, .share p.address {
         font-size: 2.9vh;
         line-height: 4.5vh;
     }
@@ -187,7 +187,7 @@
         font-size: 3vw;
     }
 
-    .advantages ul li, .share > p {
+    .advantages ul li, .share > p, .share p.address {
         font-size: 3.7vh;
         line-height: 4.5vh;
     }
@@ -360,7 +360,7 @@
         font-size: 5vw;
     }
 
-    .advantages ul li, .share > p {
+    .advantages ul li, .share > p, .share p.address {
         font-size: 3vh;
         line-height: 4vh;
     }

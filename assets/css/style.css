@@ -215,7 +215,7 @@ section {
     overflow: hidden;
 }
 
-main, .service, .about-us {
+main, .service, .about-us, .contacts {
     transition: transform 1s;
     background-color: #f3f3f3;
     z-index: 10;
@@ -320,7 +320,7 @@ main, .service, .about-us {
 
 }
 
-.advantages ul li, .share > p, .service-list ul li{
+.advantages ul li, .share > p, .service-list ul li, .share p.address{
     list-style-position: inside;
     list-style-type: decimal;
     color: #666;
@@ -338,7 +338,7 @@ main, .service, .about-us {
     text-align: justify;
 }
 
-.share:first-child > img {
+.share > img.share {
     width: 90%;
 }
 
@@ -648,4 +648,8 @@ iframe{
 /* content animate out */
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
     opacity: 0;
+}
+
+.share p.address{
+    text-align: center;
 }
