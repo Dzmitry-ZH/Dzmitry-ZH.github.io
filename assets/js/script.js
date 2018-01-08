@@ -51,23 +51,21 @@ $(function () {
         hide($("main"));
         hide($('.about-us'));
         hide($('.contacts'));
-
-        $('#about-us1').on('click', function () {
-            show($('.about-us'));
-            hide($('main'));
-            hide($('.service'));
-            hide($('.contacts'));
-        });
-
-        $('#contacts1').on('click', function () {
-            show($('.contacts'));
-            hide($('main'));
-            hide($('.service'));
-            hide($('.about-us'));
-        });
-
     });
 
+    $('#about-us1').on('click', function () {
+        show($('.about-us'));
+        hide($('main'));
+        hide($('.service'));
+        hide($('.contacts'));
+    });
+
+    $('#contacts1').on('click', function () {
+        show($('.contacts'));
+        hide($('main'));
+        hide($('.service'));
+        hide($('.about-us'));
+    });
 
     function show(element) {
         element.removeClass("hide");
