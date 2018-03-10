@@ -5,6 +5,7 @@ import Market from './assets/view/Market.vue'
 import News from './assets/view/News.vue'
 import Post from './assets/view/Post.vue'
 import About from './assets/view/About.vue'
+import Test from './assets/view/test.vue'
 import Vue2Filters from 'vue2-filters'
 
 Vue.use(VueRouter);
@@ -17,14 +18,14 @@ var router = new VueRouter({
     {path: '/', component: Market},
     {path: '/news', component: News},
     {path: '/news/:id', name: 'post1', component: Post},
-    {path: '/about', component: About}
+    {path: '/about', component: About},
+    {path: '/test', component: Test}
   ]
 })
 
 new Vue({
   el: '#app',
   data: {
-    title: 'CryptoMarket'
   },
   router: router,
   render: h => h(App),

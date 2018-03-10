@@ -22,7 +22,7 @@
 <script>
   const COINMARKETCAP_API_URI_TOTAL = "https://api.coinmarketcap.com/v1/global/";
   const COINMARKETCAP_API_URI = "https://api.coinmarketcap.com/v1/ticker/?limit=100";
-  const UPDATE_INTERVAL = 6000;
+  const UPDATE_INTERVAL = 1000;
   export default {
     name: 'app',
     data() {
