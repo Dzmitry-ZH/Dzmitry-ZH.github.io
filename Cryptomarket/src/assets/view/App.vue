@@ -10,13 +10,19 @@
     <h1>{{title}}</h1>
     <nav>
       <ul>
-        <li><router-link to='/'>Главная</router-link></li>
-        <li><router-link to='/news'>Новости</router-link></li>
-        <li><router-link to='/about' >О нас</router-link></li>
+        <li>
+          <router-link to='/'>Главная</router-link>
+        </li>
+        <li>
+          <router-link to='/news'>Новости</router-link>
+        </li>
+        <li>
+          <router-link to='/about'>О нас</router-link>
+        </li>
         <li></li>
       </ul>
     </nav>
-    <router-view></router-view>
+      <router-view></router-view>
   </div>
 </template>
 <script>
@@ -27,7 +33,7 @@
     name: 'app',
     data() {
       return {
-        search:'',
+        search: '',
         coins: [],
         title: 'Cryptomarket',
         totalCoins: {}
@@ -58,5 +64,6 @@
   }
 </script>
 
-<style>
+<style scoped>
+
 </style>

@@ -7,12 +7,12 @@
         <td>№</td>
         <td>Имя</td>
         <td>Символ</td>
-        <td :data-sortDirection='sortDirection' @click="SortPrice">Цена (USD)</td>
-        <td>1H</td>
-        <td>1D</td>
-        <td>1W</td>
-        <td>Объем(24H)</td>
-        <td>Капитализация (USD)</td>
+        <td :data-sortDirection='sortDirection' data-type='price_usd' @click="Sort">Цена (USD)</td>
+        <td :data-sortDirection='sortDirection' data-type='percent_change_1h' @click="Sort">1H</td>
+        <td :data-sortDirection='sortDirection' data-type='percent_change_24h' @click="Sort">1D</td>
+        <td :data-sortDirection='sortDirection' data-type='percent_change_7d' @click="Sort">1W</td>
+        <td :data-sortDirection='sortDirection' data-type='24h_volume_usd' @click="Sort">Объем(24H)</td>
+        <td :data-sortDirection='sortDirection' data-type='market_cap_usd' @click="Sort">Капитализация (USD)</td>
       </tr>
       </thead>
       <tbody>
@@ -50,7 +50,8 @@
         coins: [],
         coinData: [],
         search: '',
-        sortDirection: ''
+        sortDirection: '',
+        type: ''
       }
     },
     methods: {
@@ -72,7 +73,7 @@
           axios.get(COINMARKETCAP_API_URI)
             .then((resp) => {
               this.coins = resp.data;
-              this.AutoSortPrice();
+              this.AutoSort();
               return this.coins;
             })
             .catch(err => console.log(err))
@@ -96,50 +97,41 @@
       getColor: (num) => {
         return num > 0 ? "color:green;" : "color:red;";
       },
-      SortUp: function () {
+      SortUp: function (type) {
         return this.coins.sort(function (a, b) {
-          if (parseFloat(a.price_usd) > parseFloat(b.price_usd)) {
-            return 1;
-          }
-          if (parseFloat(a.price_usd) < parseFloat(b.price_usd)) {
-            return -1;
-          }
-          return 0;
+          return a[type] - b[type];
         });
       },
-      SortDown: function () {
+      SortDown: function (type) {
+        // if (document.querySelector('thead tr td:nth-of-type(4)').getAttribute('data-type') === 'price') {
         return this.coins.sort(function (a, b) {
-          if (parseFloat(a.price_usd) > parseFloat(b.price_usd)) {
-            return -1;
-          }
-          if (parseFloat(a.price_usd) < parseFloat(b.price_usd)) {
-            return 1;
-          }
-          return 0;
+          return b[type] - a[type];
         });
+        // }
+        // if (document.querySelector('thead tr td:nth-of-type(5)').getAttribute('data-type') === '1H') {
+        //   return this.coins.sort(function (a, b) {
+        //     return b.percent_change_1h - a.percent_change_1h;
+        //   });
+        // }
       },
-      SortPrice: function () {
-        // console.log('testSort');
+      Sort: function (event) {
+        this.type = event.currentTarget.getAttribute('data-type');
         if (this.sortDirection === 'down') {
           this.sortDirection = 'up';
+          this.SortDown(this.type);
+
         }
         else {
           this.sortDirection = 'down';
-        }
-        if (this.sortDirection === 'down') {
-          this.SortUp();
-        }
-        else {
-          this.SortDown();
+          this.SortUp(this.type);
         }
       },
-      AutoSortPrice: function () {
-        // console.log('test');
+      AutoSort: function () {
         if (this.sortDirection === 'down') {
-          this.SortUp();
+          this.SortUp(this.type);
         }
         if (this.sortDirection === 'up') {
-          this.SortDown();
+          this.SortDown(this.type);
         }
       },
     },
@@ -151,7 +143,7 @@
 </script>
 
 <style scoped>
-  thead tr td:nth-of-type(4) {
+  thead tr td[data-type] {
     cursor: pointer;
   }
 </style>
