@@ -1,10 +1,9 @@
 <template>
   <div id="post">
     <li class="search"><input type="text" v-model="search" placeholder="search..."></li>
-    <div class="posts" v-for = 'item in filterBy (posts,search)'></div>
-      <img :src="item.image" alt="">
-      <h2>{{item.title}}</h2>
-      <p>{{item.body}}</p>
+      <img :src="link.image2" alt="">
+      <h2>{{link.title}}</h2>
+      <p v-for = 'par in link.body'>{{par}}</p>
   </div>
 </template>
 
@@ -15,13 +14,15 @@
     name: "post",
     data() {
       return {
-        search: '',
         posts: posts,
+        search: ''
       }
     },
     created: function () {
       let postId = this.$route.params.id;
-      this.item = this.posts[postId];
+      console.log(postId);
+      this.link= this.posts[postId];
+      console.log(this.link);
     }
   }
 </script>
@@ -38,12 +39,15 @@
   h2 {
     color: #292B2C;
     margin: 2vw 0;
+    text-align: center;
   }
 
   p {
     text-align: justify;
     color: #727272;
-    font-size: 1.4vw;
+    font-size: 1.6vw;
+    text-align: justify;
+    text-indent: 4vw;
   }
 
   input {

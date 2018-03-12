@@ -17,7 +17,7 @@
     name: "news",
     data() {
       return {
-        search:'',
+        search: '',
         posts: posts
       }
     }
@@ -31,26 +31,28 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
-.posts{
-  flex-basis: 29vw;
-  margin: 2vw 0;
-}
 
-.posts h4{
-  height: 7vw;
-}
+  .posts {
+    flex-basis: 360px;
+    margin: 2vw 0;
+  }
 
-.posts p{
-  height: 10vw;
-  text-align: justify;
-}
+  .posts h4 {
+    height: 7vw;
+  }
+
+  .posts p {
+    height: 11.5vw;
+    text-align: justify;
+    font-size: 1.4vw;
+  }
+
   img {
-    width: 100%;
-    height: 20vw;
+    width: 360px;
     text-align: center;
   }
 
-  .linkInNews{
+  .linkInNews {
     background-color: #0275d8;
     color: white;
     width: 10vw;
@@ -62,30 +64,30 @@
     transition: .5s;
   }
 
-  .linkInNews:hover{
+  .linkInNews:hover {
     background-color: #023e6e;
     transition: .5s;
   }
 
-  input{
+  input {
     position: absolute;
     right: -5vw;
     top: 0vw;
   }
 
-  h4{
+  h4 {
     color: #292B2C;
     text-decoration: none;
     transition: .2s;
     margin-top: 1vw;
   }
 
-  h4:hover{
+  h4:hover {
     color: #707273;
     transition: .2s;
   }
 
-  a:hover{
+  a:hover {
     text-decoration: none;
   }
 </style>

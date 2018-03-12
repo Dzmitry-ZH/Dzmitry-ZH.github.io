@@ -22,19 +22,17 @@
         <li></li>
       </ul>
     </nav>
-      <router-view></router-view>
+    <router-view></router-view>
   </div>
 </template>
 <script>
   const COINMARKETCAP_API_URI_TOTAL = "https://api.coinmarketcap.com/v1/global/";
-  const COINMARKETCAP_API_URI = "https://api.coinmarketcap.com/v1/ticker/?limit=100";
-  const UPDATE_INTERVAL = 1000;
+  const UPDATE_INTERVAL = 6000;
   export default {
     name: 'app',
     data() {
       return {
         search: '',
-        coins: [],
         title: 'Cryptomarket',
         totalCoins: {}
       }
@@ -42,24 +40,21 @@
     methods: {
       getTotalCoins: function () {
         //HTTP request using axios
-        this.interval = setInterval(function () {
+        axios.get(COINMARKETCAP_API_URI_TOTAL)
+          .then((resp) => this.totalCoins = resp.data)
+          .catch(err => console.log(err))
+      },
+      getTotalCoinsInterval: function () {
+        setInterval(function () {
           axios.get(COINMARKETCAP_API_URI_TOTAL)
             .then((resp) => this.totalCoins = resp.data)
             .catch(err => console.log(err))
         }.bind(this), UPDATE_INTERVAL)
-      },
-      getCoins: function () {
-        //HTTP request using axios
-        this.interval = setInterval(function () {
-          axios.get(COINMARKETCAP_API_URI)
-            .then((resp) => this.coins = resp.data)
-            .catch(err => console.log(err))
-        }.bind(this), UPDATE_INTERVAL)
-      },
+      }
     },
     created: function () {
       this.getTotalCoins();
-      this.getCoins();
+      this.getTotalCoinsInterval();
     }
   }
 </script>

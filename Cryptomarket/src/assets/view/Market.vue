@@ -42,7 +42,7 @@
   const CRYPTOCOMPARE_API_URI = "https://min-api.cryptocompare.com/data/all/coinlist";
   const COINMARKETCAP_API_URI = "https://api.coinmarketcap.com/v1/ticker/?limit=100";
   const IMAGE_URL = "https://www.cryptocompare.com";
-  const UPDATE_INTERVAL = 1000;
+  const UPDATE_INTERVAL = 6000;
   export default {
     name: 'market',
     data() {
@@ -60,16 +60,13 @@
         axios.get(CRYPTOCOMPARE_API_URI)
           .then((resp) => {
             this.coinData = resp.data.Data;
-            // this.getCoins();
           })
           .catch((err) => {
-            // this.getCoins();
             console.log('Error', err.message);
           })
       },
-      getCoins: function () {
-        //HTTP request using axios
-        this.interval = setInterval(function () {
+      getCoinsInterval: function () {
+        setInterval(function () {
           axios.get(COINMARKETCAP_API_URI)
             .then((resp) => {
               this.coins = resp.data;
@@ -78,6 +75,16 @@
             })
             .catch(err => console.log(err))
         }.bind(this), UPDATE_INTERVAL)
+      },
+      getCoins: function () {
+        //HTTP request using axios
+        axios.get(COINMARKETCAP_API_URI)
+          .then((resp) => {
+            this.coins = resp.data;
+            this.AutoSort();
+            return this.coins;
+          })
+          .catch(err => console.log(err))
       },
       getCoinImage: function (symbol) {
         try {
@@ -95,7 +102,7 @@
         }
       },
       getColor: (num) => {
-        return num > 0 ? "color:green;" : "color:red;";
+        return num >= 0 ? "color:green;" : "color:red;";
       },
       SortUp: function (type) {
         return this.coins.sort(function (a, b) {
@@ -107,12 +114,6 @@
         return this.coins.sort(function (a, b) {
           return b[type] - a[type];
         });
-        // }
-        // if (document.querySelector('thead tr td:nth-of-type(5)').getAttribute('data-type') === '1H') {
-        //   return this.coins.sort(function (a, b) {
-        //     return b.percent_change_1h - a.percent_change_1h;
-        //   });
-        // }
       },
       Sort: function (event) {
         this.type = event.currentTarget.getAttribute('data-type');
@@ -138,6 +139,7 @@
     created: function () {
       this.getCoinData();
       this.getCoins();
+      this.getCoinsInterval();
     }
   }
 </script>
@@ -146,4 +148,55 @@
   thead tr td[data-type] {
     cursor: pointer;
   }
+
+  tbody tr td:nth-of-type(1) {
+    width: 4vw;
+  }
+  tbody tr td:nth-of-type(2) {
+    width: 17vw;
+  }
+  tbody tr td:nth-of-type(3) {
+    width: 6vw;
+  }
+  tbody tr td:nth-of-type(4) {
+    width: 9vw;
+  }
+  tbody tr td:nth-of-type(5) {
+    width: 7vw;
+  }
+  tbody tr td:nth-of-type(6) {
+    width: 7vw;
+  }
+  tbody tr td:nth-of-type(7) {
+    width: 7vw;
+  }
+  tbody tr td:nth-of-type(8) {
+    width: 11vw;
+  }
+  tbody tr td:nth-of-type(9) {
+    width: 12vw;
+  }
+
+  /*tbody tr td:nth-of-type(3){*/
+  /*width: 3vw;*/
+  /*}*/
+  /*tbody tr td:nth-of-type(4){*/
+  /*width: 3vw;*/
+  /*}*/
+  /*tbody tr td:nth-of-type(5){*/
+  /*width: 3vw;*/
+  /*}*/
+  /*tbody tr td:nth-of-type(6){*/
+  /*width: 3vw;*/
+  /*}*/
+  /*tbody tr td:nth-of-type(7){*/
+  /*width: 3vw;*/
+  /*}*/
+  /*tbody tr td:nth-of-type(8){*/
+  /*width: 3vw;*/
+  /*}*/
+  /*tbody tr td:nth-of-type(9){*/
+  /*width: 3vw;*/
+  /*}*/
+
 </style>
