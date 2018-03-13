@@ -30,6 +30,7 @@
     margin: 0 4vw;
     justify-content: space-between;
     flex-wrap: wrap;
+    min-height: 80vh;
   }
 
   .posts {
@@ -71,7 +72,7 @@
 
   input {
     position: absolute;
-    right: -5vw;
+    right: -4vw;
     top: 0vw;
   }
 

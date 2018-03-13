@@ -89,13 +89,13 @@
       getCoinImage: function (symbol) {
         try {
           if (symbol === 'MIOTA') {
-            return IMAGE_URL + this.coinData['IOT'].ImageUrl;
+            return IMAGE_URL + this.coinData['IOT']['ImageUrl'];
           }
           else if (symbol === 'NANO') {
-            return IMAGE_URL + this.coinData['XRB'].ImageUrl;
+            return IMAGE_URL + this.coinData['XRB']['ImageUr'];
           }
           else {
-            return IMAGE_URL + this.coinData[symbol].ImageUrl;
+            return IMAGE_URL + this.coinData[symbol]['ImageUrl'];
           }
         } catch (err) {
           return "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"
@@ -145,18 +145,19 @@
 </script>
 
 <style scoped>
+
   thead tr td[data-type] {
     cursor: pointer;
   }
 
   tbody tr td:nth-of-type(1) {
-    width: 4vw;
+    width: 5vw;
   }
   tbody tr td:nth-of-type(2) {
     width: 17vw;
   }
   tbody tr td:nth-of-type(3) {
-    width: 6vw;
+    width: 7vw;
   }
   tbody tr td:nth-of-type(4) {
     width: 9vw;
@@ -174,29 +175,6 @@
     width: 11vw;
   }
   tbody tr td:nth-of-type(9) {
-    width: 12vw;
+    width: 15vw;
   }
-
-  /*tbody tr td:nth-of-type(3){*/
-  /*width: 3vw;*/
-  /*}*/
-  /*tbody tr td:nth-of-type(4){*/
-  /*width: 3vw;*/
-  /*}*/
-  /*tbody tr td:nth-of-type(5){*/
-  /*width: 3vw;*/
-  /*}*/
-  /*tbody tr td:nth-of-type(6){*/
-  /*width: 3vw;*/
-  /*}*/
-  /*tbody tr td:nth-of-type(7){*/
-  /*width: 3vw;*/
-  /*}*/
-  /*tbody tr td:nth-of-type(8){*/
-  /*width: 3vw;*/
-  /*}*/
-  /*tbody tr td:nth-of-type(9){*/
-  /*width: 3vw;*/
-  /*}*/
-
 </style>

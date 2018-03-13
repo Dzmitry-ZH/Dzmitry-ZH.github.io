@@ -24,7 +24,9 @@ module.exports = [
       p6: 'А вот Binance, которую недавно пытались взломать, не проявляет подозрительной активности. Как и GDAX, Bitfinex и Kraken.'
     },
     image: 'http://res.cloudinary.com/dnoap6ayr/image/upload/v1520883162/OKEX.png',
-    image2: 'http://res.cloudinary.com/dnoap6ayr/image/upload/v1520886806/OKEX2.png'
+    image2: 'http://res.cloudinary.com/dnoap6ayr/image/upload/v1520886806/OKEX2.png',
+    previous:'Назад',
+    forward:'Вперед'
   },
   {
     title: 'Telegram пообещал вернуть деньги в случае неудачи на ICO',
@@ -36,7 +38,9 @@ module.exports = [
       p4: 'Однако пока формально речь не идёт о продаже криптовалюты. Инвесторы покупают права на приобретение токенов Gram, которые запустят позднее. Причём некоторые из них уже перепродали права на покупку с премией в 50% и более.'
     },
     image: 'http://res.cloudinary.com/dnoap6ayr/image/upload/v1520889962/TON.jpg',
-    image2: 'http://res.cloudinary.com/dnoap6ayr/image/upload/v1520890167/TON2.jpg'
+    image2: 'http://res.cloudinary.com/dnoap6ayr/image/upload/v1520890167/TON2.jpg',
+    previous:'Назад',
+    forward:'Вперед'
   },
   {
     title: 'Почему дешевеет биткоин. Попечитель Mt.Gox продал BTC на $400 миллионов',
@@ -51,7 +55,9 @@ module.exports = [
       p7: 'Напомним, биржа Mt.Gox в 2011 году подверглась хакерской атаке, в результате которой с торговой площадки похитили $500 млн в биткоинах, а в феврале 2014 г. компания объявила себя банкротом, в результате чего многие инвесторы понесли серьезные финансовые убытки.'
     },
     image: 'http://res.cloudinary.com/dnoap6ayr/image/upload/v1520883234/pexels-photo-730567.jpg',
-    image2: 'http://res.cloudinary.com/dnoap6ayr/image/upload/v1520886979/pexels-photo-7305672.jpg'
+    image2: 'http://res.cloudinary.com/dnoap6ayr/image/upload/v1520886979/pexels-photo-7305672.jpg',
+    previous:'Назад',
+    forward:'Вперед'
   },
   {
     title: 'USDT: что за валюта и как ей грамотно пользоваться на биржах',
@@ -65,7 +71,9 @@ module.exports = [
       p6: 'Нельзя утверждать, что криптовалюта Tether является мошеннической, также, как и нельзя с полной уверенностью сказать, что все токены USDT подтверждены реальными деньгами. Единственное, что можно утверждать, так это то, что криптовалюта Tether является удобным инструментом для проведения обменных и расчетных операций в криптовалютой среде.'
     },
     image: 'http://res.cloudinary.com/dnoap6ayr/image/upload/v1520883378/USDT.jpg',
-    image2: 'http://res.cloudinary.com/dnoap6ayr/image/upload/v1520887003/USDT2.jpg'
+    image2: 'http://res.cloudinary.com/dnoap6ayr/image/upload/v1520887003/USDT2.jpg',
+    previous:'Назад',
+    forward:'Вперед'
   },
   {
     title: 'Пенсионеры инвестируют в криптовалюты активнее молодёжи',
@@ -78,7 +86,9 @@ module.exports = [
       p5: 'Согласно опросу, респонденты, которые продолжат инвестировать в криптовалютность, составляли всего 6,4% от общего количества. 31,3% инвесторов даже не окунули свои пальцы в воды криптовалюты.'
     },
     image: 'http://res.cloudinary.com/dnoap6ayr/image/upload/v1520891687/pensioners.jpg',
-    image2: 'http://res.cloudinary.com/dnoap6ayr/image/upload/v1520891762/pensioners2.jpg'
+    image2: 'http://res.cloudinary.com/dnoap6ayr/image/upload/v1520891762/pensioners2.jpg',
+    previous:'Назад',
+    forward:'Вперед'
   }
 
 ]

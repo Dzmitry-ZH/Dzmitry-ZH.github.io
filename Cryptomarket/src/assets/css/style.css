@@ -1,3 +1,7 @@
+body{
+  min-height: 90vh;
+}
+
 h1 {
   text-align: center;
   color: #5a5a5a;
@@ -56,7 +60,7 @@ table.header span {
 }
 
 .table {
-  width: 80vw;
+  width: 85vw;
   margin: 0 auto 10vw;
   font-size: 16px;
 }
@@ -65,7 +69,7 @@ table.header span {
   border-top: none;
 }
 
-#market, #news, #about, #post {
+#market, #news, #post, #about {
   position: relative;
 }
 
@@ -75,7 +79,7 @@ table.header span {
   margin: 0;
   list-style-type: none;
   position: absolute;
-  right: 9.9vw;
+  right: 7vw;
   top: -2.6vw;
   font-size: 1.4vw;
 }
@@ -97,34 +101,4 @@ table thead {
   display: inline-block;
   width: calc(80vw / 4);
   /*text-align: center;*/
-}
-
-.navigation ul li:nth-of-type(4) {
-  text-align: right;
-}
-
-router-link {
-  transition: 5s;
-}
-
-.tringleUp {
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 100px;
-  left: 200px;
-  border-bottom: 10px solid black;
-  border-left: 5px solid transparent;
-  border-right:5px solid transparent;
-}
-
-.tringleDown{
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 100px;
-  left: 200px;
-  border-top: 10px solid black;
-  border-left: 5px solid transparent;
-  border-right:5px solid transparent;
 }

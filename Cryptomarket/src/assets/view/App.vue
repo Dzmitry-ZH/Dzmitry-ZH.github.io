@@ -17,7 +17,7 @@
           <router-link to='/news'>Новости</router-link>
         </li>
         <li>
-          <router-link to='/about'>О нас</router-link>
+          <router-link to='/about'>Контакты</router-link>
         </li>
         <li></li>
       </ul>
