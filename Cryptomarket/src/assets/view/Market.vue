@@ -1,7 +1,7 @@
 <template>
   <div id="market">
-    <li class="search"><input type="text" v-model="search" placeholder="search..."></li>
-    <table class="table table-hover">
+    <li class="search"><input type="text" class="form-control" v-model="search" placeholder="search..."></li>
+    <table class="table table-hover table-responsive">
       <thead>
       <tr>
         <td>№</td>
@@ -92,7 +92,7 @@
             return IMAGE_URL + this.coinData['IOT']['ImageUrl'];
           }
           else if (symbol === 'NANO') {
-            return IMAGE_URL + this.coinData['XRB']['ImageUr'];
+            return IMAGE_URL + this.coinData['XRB']['ImageUrl'];
           }
           else {
             return IMAGE_URL + this.coinData[symbol]['ImageUrl'];
@@ -145,36 +145,56 @@
 </script>
 
 <style scoped>
+  #market {
+    min-height: 40vw;
+  }
 
   thead tr td[data-type] {
     cursor: pointer;
   }
 
-  tbody tr td:nth-of-type(1) {
+  tbody tr td:nth-of-type(1),
+  thead tr td:nth-of-type(1) {
     width: 5vw;
   }
-  tbody tr td:nth-of-type(2) {
+
+  tbody tr td:nth-of-type(2),
+  thead tr td:nth-of-type(2) {
     width: 17vw;
   }
-  tbody tr td:nth-of-type(3) {
+
+  tbody tr td:nth-of-type(3),
+  thead tr td:nth-of-type(3) {
     width: 7vw;
   }
-  tbody tr td:nth-of-type(4) {
+
+  tbody tr td:nth-of-type(4),
+  thead tr td:nth-of-type(4) {
     width: 9vw;
   }
-  tbody tr td:nth-of-type(5) {
+
+  tbody tr td:nth-of-type(5),
+  thead tr td:nth-of-type(5) {
     width: 7vw;
   }
-  tbody tr td:nth-of-type(6) {
+
+  tbody tr td:nth-of-type(6),
+  thead tr td:nth-of-type(6) {
     width: 7vw;
   }
-  tbody tr td:nth-of-type(7) {
+
+  tbody tr td:nth-of-type(7),
+  thead tr td:nth-of-type(7) {
     width: 7vw;
   }
-  tbody tr td:nth-of-type(8) {
+
+  tbody tr td:nth-of-type(8),
+  thead tr td:nth-of-type(8) {
     width: 11vw;
   }
-  tbody tr td:nth-of-type(9) {
+
+  tbody tr td:nth-of-type(9),
+  thead tr td:nth-of-type(9) {
     width: 15vw;
   }
 </style>

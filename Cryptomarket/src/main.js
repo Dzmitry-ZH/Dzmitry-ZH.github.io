@@ -5,14 +5,25 @@ import Market from './assets/view/Market.vue'
 import News from './assets/view/News.vue'
 import Post from './assets/view/Post.vue'
 import About from './assets/view/About.vue'
-import Input from './assets/view/Input.vue'
-import Message from './assets/view/Message.vue'
+import SignUp from './assets/view/SignUp.vue'
 import Vue2Filters from 'vue2-filters'
+import firebase from 'firebase'
 
+Vue.config.productionTip = false
 Vue.use(VueRouter);
 Vue.use(Vue2Filters);
 // Vue.component('main', Market);
 // Vue.component('news', News);
+
+var config = {
+  apiKey: "AIzaSyAJ7HoYx0pnF4kjpC10fnixLFQmmeScm_E",
+  authDomain: "cryptomarket-30130.firebaseapp.com",
+  databaseURL: "https://cryptomarket-30130.firebaseio.com",
+  projectId: "cryptomarket-30130",
+  storageBucket: "cryptomarket-30130.appspot.com",
+  messagingSenderId: "961803419182"
+};
+firebase.initializeApp(config);
 
 var router = new VueRouter({
   routes: [
@@ -20,15 +31,20 @@ var router = new VueRouter({
     {path: '/news', component: News},
     {path: '/news/:id', name: 'post1', component: Post},
     {path: '/about', component: About},
-    {path: '/input', component: Input},
-    {path: '/message', component: Message}
+    {path: '/signup', component: SignUp}
   ]
 })
 
+// router.beforeEach((to, from, next) => {
+//   let currentUser = firebase.auth().currentUser;
+//   let requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+//   if (requiresAuth && !currentUser) next('/signup')
+//   else if (!requiresAuth && currentUser) next('/hello')
+//   else next()
+// })
 new Vue({
   el: '#app',
-  data: {
-  },
+  data: {},
   router: router,
   render: h => h(App),
 })

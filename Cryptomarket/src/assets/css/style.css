@@ -5,7 +5,8 @@ body{
 h1 {
   text-align: center;
   color: #5a5a5a;
-  margin: 50px;
+  margin: 5vw;
+  font-size: 3.5vw;
 }
 
 td img {
@@ -43,6 +44,7 @@ table.header {
   width: 100%;
   height: 4vw;
   background-color: #F8F8F8;
+  position: relative;
 }
 
 table.header td {
@@ -80,7 +82,7 @@ table.header span {
   list-style-type: none;
   position: absolute;
   right: 7vw;
-  top: -2.6vw;
+  top: -3vw;
   font-size: 1.4vw;
 }
 

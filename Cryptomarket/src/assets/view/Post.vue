@@ -1,11 +1,11 @@
 <template>
   <div id="post">
-    <li class="search"><input type="text" v-model="search" placeholder="search..."></li>
+    <li class="search"><input type="text" class="form-control" v-model="search" placeholder="search..."></li>
     <img :src="link.image2" alt="">
     <h2>{{link.title}}</h2>
     <p v-for='par in link.body'>{{par}}</p>
-    <router-link to='/news' class="back linkInNews">Назад</router-link>
-    <router-link v-if='next<6' class="forward linkInNews" :to='{name: "post1", params:{id:next}}' @click.native='changeForward'>Вперед</router-link>
+    <router-link to='/news' class="back btn btn-primary">Назад</router-link>
+    <router-link v-if='next<6' class="forward btn btn-primary" :to='{name: "post1", params:{id:next}}' @click.native='changeForward'>Вперед</router-link>
   </div>
 </template>
 
@@ -24,12 +24,13 @@
     methods: {
       changeForward: function () {
         this.$router.go(this.to);
+        // this.$router.replace(this.to);
       }
     },
     created: function () {
       let postId = this.$route.params.id;
       this.link = this.posts[postId];
-    }
+    },
   }
 </script>
 
@@ -52,6 +53,7 @@
     color: #292B2C;
     margin: 2vw 0;
     text-align: center;
+    font-size: 2.7vw;
   }
 
   p {
@@ -63,21 +65,16 @@
   }
 
   input {
-    position: absolute;
-    right: -11vw;
+    position: relative;
+    right: -10vw;
     top: -2vw;
   }
 
-  .linkInNews {
-    background-color: #0275d8;
-    color: white;
+  .btn{
     width: 10vw;
-    height: 2.5vw;
-    line-height: 2.5vw;
     text-align: center;
-    display: inline-block;
-    border-radius: .5vw;
-    transition: .5s;
+    font-size: 1.4vw;
+    padding: 1vw;
   }
 
   .back {
