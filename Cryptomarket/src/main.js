@@ -5,6 +5,8 @@ import Market from './assets/view/Market.vue'
 import News from './assets/view/News.vue'
 import Post from './assets/view/Post.vue'
 import About from './assets/view/About.vue'
+import LoginPage from './assets/view/LoginPage.vue'
+import SignIn from './assets/view/SignIn.vue'
 import SignUp from './assets/view/SignUp.vue'
 import Vue2Filters from 'vue2-filters'
 import firebase from 'firebase'
@@ -15,6 +17,7 @@ Vue.use(Vue2Filters);
 // Vue.component('main', Market);
 // Vue.component('news', News);
 
+// Initialize Firebase
 var config = {
   apiKey: "AIzaSyAJ7HoYx0pnF4kjpC10fnixLFQmmeScm_E",
   authDomain: "cryptomarket-30130.firebaseapp.com",
@@ -31,6 +34,8 @@ var router = new VueRouter({
     {path: '/news', component: News},
     {path: '/news/:id', name: 'post1', component: Post},
     {path: '/about', component: About},
+    {path: '/loginpage', component: LoginPage},
+    {path: '/signin', component: SignIn},
     {path: '/signup', component: SignUp}
   ]
 })

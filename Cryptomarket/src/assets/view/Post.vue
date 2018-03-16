@@ -1,11 +1,11 @@
 <template>
   <div id="post">
-    <li class="search"><input type="text" class="form-control" v-model="search" placeholder="search..."></li>
+    <li class="search"><input type="text" class="form-control search-input" v-model="search" placeholder="search..."></li>
     <img :src="link.image2" alt="">
     <h2>{{link.title}}</h2>
     <p v-for='par in link.body'>{{par}}</p>
     <router-link to='/news' class="back btn btn-primary">Назад</router-link>
-    <router-link v-if='next<6' class="forward btn btn-primary" :to='{name: "post1", params:{id:next}}' @click.native='changeForward'>Вперед</router-link>
+    <router-link v-if='next < posts.length' class="forward btn btn-primary" :to='{name: "post1", params:{id:next}}' @click.native='changeForward'>Вперед</router-link>
   </div>
 </template>
 
@@ -23,7 +23,7 @@
     },
     methods: {
       changeForward: function () {
-        this.$router.go(this.to);
+        this.$router.go({ path: `/news/${this.to}`, name:'post1'});
         // this.$router.replace(this.to);
       }
     },

@@ -84,6 +84,13 @@ table.header span {
   right: 7vw;
   top: -3vw;
   font-size: 1.4vw;
+  width: 16.5vw;
+}
+
+.search-input{
+  background: url("../img/search.svg") no-repeat;
+  background-size: 2vw;
+  background-position: right;
 }
 
 table thead {

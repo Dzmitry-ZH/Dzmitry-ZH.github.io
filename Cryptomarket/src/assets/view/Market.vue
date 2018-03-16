@@ -1,6 +1,7 @@
 <template>
   <div id="market">
-    <li class="search"><input type="text" class="form-control" v-model="search" placeholder="search..."></li>
+    <li class="search"><input type="text" class="form-control search-input" v-model="search" placeholder="search...">
+    </li>
     <table class="table table-hover table-responsive">
       <thead>
       <tr>
@@ -39,10 +40,6 @@
 </template>
 
 <script>
-  const CRYPTOCOMPARE_API_URI = "https://min-api.cryptocompare.com/data/all/coinlist";
-  const COINMARKETCAP_API_URI = "https://api.coinmarketcap.com/v1/ticker/?limit=100";
-  const IMAGE_URL = "https://www.cryptocompare.com";
-  const UPDATE_INTERVAL = 6000;
   export default {
     name: 'market',
     data() {
@@ -51,13 +48,17 @@
         coinData: [],
         search: '',
         sortDirection: '',
-        type: ''
-      }
+        type: '',
+        CRYPTOCOMPARE_API_URI: "https://min-api.cryptocompare.com/data/all/coinlist",
+        COINMARKETCAP_API_URI: "https://api.coinmarketcap.com/v1/ticker/?limit=100",
+        IMAGE_URL: "https://www.cryptocompare.com",
+        UPDATE_INTERVAL: 6000
+    }
     },
     methods: {
       getCoinData: function () {
         //HTTP request using axios
-        axios.get(CRYPTOCOMPARE_API_URI)
+        axios.get(this.CRYPTOCOMPARE_API_URI)
           .then((resp) => {
             this.coinData = resp.data.Data;
           })
@@ -67,18 +68,18 @@
       },
       getCoinsInterval: function () {
         setInterval(function () {
-          axios.get(COINMARKETCAP_API_URI)
+          axios.get(this.COINMARKETCAP_API_URI)
             .then((resp) => {
               this.coins = resp.data;
               this.AutoSort();
               return this.coins;
             })
             .catch(err => console.log(err))
-        }.bind(this), UPDATE_INTERVAL)
+        }.bind(this), this.UPDATE_INTERVAL)
       },
       getCoins: function () {
         //HTTP request using axios
-        axios.get(COINMARKETCAP_API_URI)
+        axios.get(this.COINMARKETCAP_API_URI)
           .then((resp) => {
             this.coins = resp.data;
             this.AutoSort();
@@ -89,13 +90,13 @@
       getCoinImage: function (symbol) {
         try {
           if (symbol === 'MIOTA') {
-            return IMAGE_URL + this.coinData['IOT']['ImageUrl'];
+            return this.IMAGE_URL + this.coinData['IOT']['ImageUrl'];
           }
           else if (symbol === 'NANO') {
-            return IMAGE_URL + this.coinData['XRB']['ImageUrl'];
+            return this.IMAGE_URL + this.coinData['XRB']['ImageUrl'];
           }
           else {
-            return IMAGE_URL + this.coinData[symbol]['ImageUrl'];
+            return this.IMAGE_URL + this.coinData[symbol]['ImageUrl'];
           }
         } catch (err) {
           return "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg"

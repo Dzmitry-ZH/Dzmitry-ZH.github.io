@@ -42,9 +42,13 @@
           this.error = true;
         }
         else {
-          firebase.auth().createUserWithEmailAndPassword(this.user.email, this.user.password).then(function (user) {
-           this.$router.replace('/')
-          })
+          firebase.auth().createUserWithEmailAndPassword(this.user.email, this.user.password)
+            .then(() => {
+              this.$emit('regSuccess', 'sign-in')
+            })
+            .catch(error =>{
+              console.log(error);
+            })
         }
       }
     }

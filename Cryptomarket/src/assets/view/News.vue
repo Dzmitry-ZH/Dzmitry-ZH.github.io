@@ -1,6 +1,6 @@
 <template>
   <div id="news">
-    <li class="search"><input type="text" class="form-control" v-model="search" placeholder="search..."></li>
+    <li class="search"><input type="text" class="form-control search-input" v-model="search" placeholder="search..."></li>
     <div class="posts" v-for="(item,index) in filterBy(posts,search)">
       <img :src="item.image" alt="">
       <router-link :to='{name: "post1", params:{id:index}}'><h4>{{item.title}}</h4></router-link>
