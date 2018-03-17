@@ -7,9 +7,23 @@
         <td><span>BTC доминация: </span>{{totalCoins.bitcoin_percentage_of_market_cap + '%'}}</td>
       </tr>
     </table>
-    <router-link to='/loginpage'>
-      <button type="submit" class="btn btn-primary entrance">Войти</button>
-    </router-link>
+    <div class="buttons" v-if="!signComplete">
+      <router-link to='/sign-in'>
+        <button type="submit" class="btn btn-outline-primary">Войти</button>
+      </router-link>
+      <router-link to='/sign-up'>
+        <button type="submit" class="btn btn-outline-primary">Регистрация</button>
+      </router-link>
+    </div>
+    <div class="buttons" v-if="signComplete">
+      <router-link to='/hello'>
+        <button class="btn btn-outline-primary">Личный кабинет</button>
+      </router-link>
+      <!--<router-link to='/'>-->
+      <button class="btn btn-outline-primary" @click="logoutUser">Выйти</button>
+      <!--</router-link>-->
+    </div>
+    <span class="registeredUser" v-if="signComplete">{{name}} – {{email}}</span>
     <h1>{{title}}</h1>
     <nav>
       <ul>
@@ -25,10 +39,11 @@
         <li></li>
       </ul>
     </nav>
-    <router-view></router-view>
+    <router-view @addUser='email = $event.email, uid = $event.uid, signComplete = $event.signComplete, name = $event.displayName'></router-view>
   </div>
 </template>
 <script>
+  import firebase from 'firebase'
 
   export default {
     name: 'app',
@@ -38,10 +53,9 @@
         title: 'Cryptomarket',
         totalCoins: {},
         email: '',
-        user: {
-          email: '',
-          password: ''
-        },
+        uid: '',
+        name: '',
+        signComplete: false,
         COINMARKETCAP_API_URI_TOTAL: "https://api.coinmarketcap.com/v1/global/",
         UPDATE_INTERVAL: 6000
       }
@@ -59,6 +73,12 @@
             .then((resp) => this.totalCoins = resp.data)
             .catch(err => console.log(err))
         }.bind(this), this.UPDATE_INTERVAL)
+      },
+      logoutUser: function () {
+        firebase.auth().signOut().then(() => {
+          this.signComplete = false;
+          this.$router.replace('/')
+        })
       }
     },
     created: function () {
@@ -73,16 +93,20 @@
     height: 100px;
   }
 
-  .entrance {
-    position: absolute;
-    width: 16.5vw;
-    top: 10vw;
-    right: 7vw;
-    margin-top: -.5vw;
-  }
-
   button {
     cursor: pointer;
+  }
+
+  .buttons {
+    position: absolute;
+    top: 8vw;
+    right: 7vw;
+  }
+
+  .registeredUser {
+    position: absolute;
+    top: 5vw;
+    right: 7vw;
   }
 
   ::-webkit-input-placeholder {

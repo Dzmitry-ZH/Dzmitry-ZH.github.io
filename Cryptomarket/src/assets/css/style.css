@@ -1,11 +1,11 @@
-body{
-  min-height: 90vh;
+html {
+  overflow-y: scroll;
 }
 
 h1 {
   text-align: center;
   color: #5a5a5a;
-  margin: 5vw;
+  margin: 4vw;
   font-size: 3.5vw;
 }
 
@@ -87,7 +87,7 @@ table.header span {
   width: 16.5vw;
 }
 
-.search-input{
+.search-input {
   background: url("../img/search.svg") no-repeat;
   background-size: 2vw;
   background-position: right;
@@ -110,4 +110,13 @@ table thead {
   display: inline-block;
   width: calc(80vw / 4);
   /*text-align: center;*/
+}
+
+.alert {
+  width: 20vw;
+  margin: 0 auto;
+  margin-top: 1vw;
+  margin-bottom: 2vw;
+  text-align: center;
+  font-size: 1.4vw;
 }

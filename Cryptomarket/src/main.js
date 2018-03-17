@@ -8,6 +8,7 @@ import About from './assets/view/About.vue'
 import LoginPage from './assets/view/LoginPage.vue'
 import SignIn from './assets/view/SignIn.vue'
 import SignUp from './assets/view/SignUp.vue'
+import Hello from './assets/view/hello.vue'
 import Vue2Filters from 'vue2-filters'
 import firebase from 'firebase'
 
@@ -35,18 +36,18 @@ var router = new VueRouter({
     {path: '/news/:id', name: 'post1', component: Post},
     {path: '/about', component: About},
     {path: '/loginpage', component: LoginPage},
-    {path: '/signin', component: SignIn},
-    {path: '/signup', component: SignUp}
+    {path: '/sign-in', component: SignIn},
+    {path: '/sign-up', component: SignUp},
+    {path: '/hello', component: Hello}
   ]
 })
-
 // router.beforeEach((to, from, next) => {
 //   let currentUser = firebase.auth().currentUser;
 //   let requiresAuth = to.matched.some(record => record.meta.requiresAuth);
-//   if (requiresAuth && !currentUser) next('/signup')
+//   if (requiresAuth && !currentUser) next('/')
 //   else if (!requiresAuth && currentUser) next('/hello')
 //   else next()
-// })
+// }),
 new Vue({
   el: '#app',
   data: {},

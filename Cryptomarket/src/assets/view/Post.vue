@@ -1,6 +1,6 @@
 <template>
   <div id="post">
-    <li class="search"><input type="text" class="form-control search-input" v-model="search" placeholder="search..."></li>
+    <li class="search"><input type="text" class="form-control search-input" placeholder="search..."></li>
     <img :src="link.image2" alt="">
     <h2>{{link.title}}</h2>
     <p v-for='par in link.body'>{{par}}</p>
@@ -68,6 +68,7 @@
     position: relative;
     right: -10vw;
     top: -2vw;
+    pointer-events: none;
   }
 
   .btn{
