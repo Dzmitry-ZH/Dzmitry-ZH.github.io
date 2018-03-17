@@ -40,11 +40,13 @@
       </ul>
     </nav>
     <router-view @addUser='email = $event.email, uid = $event.uid, signComplete = $event.signComplete, name = $event.displayName'></router-view>
+    <button type="button" class="btn" @click="showModal">Open Modal!</button>
+    <modal v-show="isModalVisible" @close="closeModal" />
   </div>
 </template>
 <script>
   import firebase from 'firebase'
-
+  import modal from './Modal'
   export default {
     name: 'app',
     data() {
@@ -57,8 +59,12 @@
         name: '',
         signComplete: false,
         COINMARKETCAP_API_URI_TOTAL: "https://api.coinmarketcap.com/v1/global/",
-        UPDATE_INTERVAL: 6000
+        UPDATE_INTERVAL: 6000,
+        isModalVisible: false
       }
+    },
+    components:{
+      modal
     },
     methods: {
       getTotalCoins: function () {
@@ -79,6 +85,12 @@
           this.signComplete = false;
           this.$router.replace('/')
         })
+      },
+      showModal() {
+        this.isModalVisible = true;
+      },
+      closeModal() {
+        this.isModalVisible = false;
       }
     },
     created: function () {
@@ -92,23 +104,19 @@
   #app {
     height: 100px;
   }
-
   button {
     cursor: pointer;
   }
-
   .buttons {
     position: absolute;
     top: 8vw;
     right: 7vw;
   }
-
   .registeredUser {
     position: absolute;
     top: 5vw;
     right: 7vw;
   }
-
   ::-webkit-input-placeholder {
     font-size: 1.2vw;
   }
