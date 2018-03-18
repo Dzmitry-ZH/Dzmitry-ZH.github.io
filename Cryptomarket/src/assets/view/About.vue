@@ -1,7 +1,7 @@
 <template>
   <div id="about">
     <div class="wrapper">
-      <li class="search"><input type="text" class="form-control search-input"placeholder="search..."></li>
+      <li class="search"><input type="text" class="form-control search-input no-transition"placeholder="search..."></li>
       <h2>Контактная информация</h2>
       <div class="contacts">
         <div class="address">

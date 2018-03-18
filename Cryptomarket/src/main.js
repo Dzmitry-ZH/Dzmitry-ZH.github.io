@@ -8,7 +8,7 @@ import About from './assets/view/About.vue'
 import LoginPage from './assets/view/LoginPage.vue'
 import SignIn from './assets/view/SignIn.vue'
 import SignUp from './assets/view/SignUp.vue'
-import Hello from './assets/view/hello.vue'
+import Cabinet from './assets/view/Cabinet.vue'
 import Modal from './assets/view/Modal.vue'
 import Vue2Filters from 'vue2-filters'
 import firebase from 'firebase'
@@ -16,8 +16,6 @@ import firebase from 'firebase'
 Vue.config.productionTip = false
 Vue.use(VueRouter);
 Vue.use(Vue2Filters);
-// Vue.component('main', Market);
-// Vue.component('news', News);
 
 // Initialize Firebase
 var config = {
@@ -39,7 +37,7 @@ var router = new VueRouter({
     {path: '/loginpage', component: LoginPage},
     {path: '/sign-in', component: SignIn},
     {path: '/sign-up', component: SignUp},
-    {path: '/hello', component: Hello},
+    {path: '/cabinet', component: Cabinet},
     {path: '/modal', component: Modal}
   ]
 })

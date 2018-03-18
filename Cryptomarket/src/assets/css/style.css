@@ -71,7 +71,7 @@ table.header span {
   border-top: none;
 }
 
-#market, #news, #post, #about {
+#market, #news, #post, #about, #cabinet{
   position: relative;
 }
 
@@ -119,4 +119,8 @@ table thead {
   margin-bottom: 2vw;
   text-align: center;
   font-size: 1.4vw;
+}
+
+.no-transition {
+  transition: none !important;
 }

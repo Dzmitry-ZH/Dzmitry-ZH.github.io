@@ -53,7 +53,7 @@
         COINMARKETCAP_API_URI: "https://api.coinmarketcap.com/v1/ticker/?limit=100",
         IMAGE_URL: "https://www.cryptocompare.com",
         UPDATE_INTERVAL: 6000
-    }
+      }
     },
     methods: {
       getCoinData: function () {
@@ -197,5 +197,9 @@
   tbody tr td:nth-of-type(9),
   thead tr td:nth-of-type(9) {
     width: 15vw;
+  }
+
+  .no-transition {
+    transition: none !important;
   }
 </style>
