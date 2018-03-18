@@ -32,6 +32,10 @@
                       <label for="amount">Количество монет:</label>
                       <input type="number" class="form-control" id="amount" required>
                     </div>
+                    <div class="form-group">
+                      <!--<date-picker v-model="time1" :first-day-of-week="1" lang='ru'></date-picker>-->
+                      <date-picker2 :date="startTime" :option="option"></date-picker2>
+                    </div>
                   </form>
                 </div>
                 <div class="modal-footer">
@@ -49,6 +53,9 @@
 </template>
 
 <script>
+  import DatePicker from 'vue2-datepicker'
+  import myDatepicker from 'vue-datepicker'
+
   export default {
     name: "cabinet",
     data() {
@@ -59,8 +66,76 @@
         COINMARKETCAP_API_URI: "https://api.coinmarketcap.com/v1/ticker/?limit=100",
         IMAGE_URL: "https://www.cryptocompare.com",
         UPDATE_INTERVAL: 6000,
-        showModal: false
+        showModal: false,
+        time1: '',
+        time2: '',
+        gettime:'',
+        shortcuts: [
+          {
+            text: 'Today',
+            start: new Date(),
+            end: new Date()
+          }
+        ],
+        startTime: {
+          time: ''
+        },
+        endtime: {
+          time: ''
+        },
+        option: {
+          type: 'day',
+          week: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
+          month: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+          format: 'YYYY-DD-MM',
+          placeholder: 'Выберите дату',
+          inputStyle: {
+            'display': 'inline-block',
+            'padding': '6px',
+            'line-height': '22px',
+            'font-size': '16px',
+            'border': '2px solid #fff',
+            'box-shadow': '0 1px 3px 0 rgba(0, 0, 0, 0.2)',
+            'border-radius': '2px',
+            'color': '#5F5F5F'
+          },
+          color: {
+            header: '#ccc',
+            headerText: '#f00'
+          },
+          buttons: {
+            ok: 'Ok',
+            cancel: 'Cancel'
+          },
+          overlayOpacity: 0.5, // 0.5 as default
+          dismissible: true // as true as default
+        },
+        timeoption: {
+          type: 'min',
+          week: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
+          month: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+          format: 'YYYY-MM-DD HH:mm'
+        },
+        multiOption: {
+          type: 'multi-day',
+          week: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
+          month: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+          format:"YYYY-MM-DD HH:mm"
+        },
+        limit: [{
+          type: 'weekday',
+          available: [1, 2, 3, 4, 5]
+        },
+          {
+            type: 'fromto',
+            from: '2016-02-01',
+            to: '2016-02-20'
+          }]
       }
+    },
+    components: {
+      'date-picker': DatePicker,
+      'date-picker2':myDatepicker
     },
     methods: {
       getCoinsInterval: function () {

@@ -39,8 +39,8 @@
         <li></li>
       </ul>
     </nav>
-      <router-view
-        @addUser='email = $event.email, uid = $event.uid, signComplete = $event.signComplete, name = $event.displayName'></router-view>
+    <router-view
+      @addUser='email = $event.email, uid = $event.uid, signComplete = $event.signComplete, name = $event.displayName'></router-view>
     <!--<button id="show-modal" @click="showModal = true">Show Modal</button>-->
     <!--&lt;!&ndash; use the modal component, pass in the prop &ndash;&gt;-->
     <!--<modal v-if="showModal" @close="showModal = false">-->
@@ -55,6 +55,7 @@
 <script>
   import firebase from 'firebase'
   import modal from './Modal'
+
   export default {
     name: 'app',
     data() {
