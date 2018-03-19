@@ -9,10 +9,10 @@
     </table>
     <div class="buttons" v-if="!signComplete">
       <router-link to='/sign-in'>
-        <button type="submit" class="btn btn-outline-primary">Войти</button>
+        <button class="btn btn-outline-primary">Войти</button>
       </router-link>
       <router-link to='/sign-up'>
-        <button type="submit" class="btn btn-outline-primary">Регистрация</button>
+        <button class="btn btn-outline-primary">Регистрация</button>
       </router-link>
     </div>
     <div class="buttons" v-if="signComplete">
@@ -41,20 +41,10 @@
     </nav>
     <router-view
       @addUser='email = $event.email, uid = $event.uid, signComplete = $event.signComplete, name = $event.displayName'></router-view>
-    <!--<button id="show-modal" @click="showModal = true">Show Modal</button>-->
-    <!--&lt;!&ndash; use the modal component, pass in the prop &ndash;&gt;-->
-    <!--<modal v-if="showModal" @close="showModal = false">-->
-    <!--&lt;!&ndash;-->
-    <!--you can use custom content here to overwrite-->
-    <!--default content-->
-    <!--&ndash;&gt;-->
-    <!--<h3 slot="header">custom header</h3>-->
-    <!--</modal>-->
   </div>
 </template>
 <script>
   import firebase from 'firebase'
-  import modal from './Modal'
 
   export default {
     name: 'app',
@@ -71,9 +61,6 @@
         UPDATE_INTERVAL: 6000,
         showModal: false
       }
-    },
-    components: {
-      modal
     },
     methods: {
       getTotalCoins: function () {
@@ -94,11 +81,29 @@
           this.signComplete = false;
           this.$router.replace('/')
         })
+      },
+      enterMainUser: function () {
+        var callbackUser = function (user) {
+          if (user) {
+            console.log('Вошел');
+            this.email = user.email;
+            this.uid = user.uid;
+            this.name = user.displayName;
+            this.signComplete = true;
+            console.log(this);
+          } else {
+            console.log('Вышел');
+            this.signComplete = false;
+          }
+        }.bind(this);
+        firebase.auth().onAuthStateChanged(callbackUser);
       }
     },
     created: function () {
       this.getTotalCoins();
       this.getTotalCoinsInterval();
+      this.getTotalCoinsInterval();
+      this.enterMainUser();
     }
   }
 </script>
@@ -126,5 +131,9 @@
 
   ::-webkit-input-placeholder {
     font-size: 1.2vw;
+  }
+
+  .btn {
+    font-size: 1.4vw;
   }
 </style>

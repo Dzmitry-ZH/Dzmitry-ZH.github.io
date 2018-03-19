@@ -1,6 +1,7 @@
 <template>
   <div id="news">
-    <li class="search"><input type="text" class="form-control search-input" v-model="search" placeholder="search..."></li>
+    <li class="search"><input type="text" class="form-control search-input" v-model="search" placeholder="search...">
+    </li>
     <div class="posts" v-for="(item,index) in filterBy(posts,search)">
       <img :src="item.image" alt="">
       <router-link :to='{name: "post1", params:{id:index}}'><h4>{{item.title}}</h4></router-link>
@@ -54,7 +55,7 @@
     text-align: center;
   }
 
-  .btn{
+  .btn {
     width: 10vw;
     text-align: center;
     font-size: 1.4vw;
@@ -82,4 +83,10 @@
   a:hover {
     text-decoration: none;
   }
+
+  /*@media (min-width: 480px) {*/
+    /*#news {*/
+      /*background-color: lightgreen;*/
+    /*}*/
+  /*}*/
 </style>

@@ -46,13 +46,12 @@
               email: response.email,
               uid: response.uid,
               displayName: response.displayName,
-              signComplete:true
+              signComplete: true
             }
             this.$emit('addUser', information);
             this.signSuccess = true;
             this.visible = false;
             this.signError = false;
-            // this.$router.replace('about');
           })
           .catch(error => {
             this.signError = true;

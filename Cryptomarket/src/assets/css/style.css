@@ -64,14 +64,14 @@ table.header span {
 .table {
   width: 85vw;
   margin: 0 auto 10vw;
-  font-size: 16px;
+  font-size: 1.3vw;
 }
 
 .table thead td {
   border-top: none;
 }
 
-#market, #news, #post, #about, #cabinet{
+#market, #news, #post, #about, #cabinet {
   position: relative;
 }
 
@@ -82,7 +82,7 @@ table.header span {
   list-style-type: none;
   position: absolute;
   right: 7vw;
-  top: -3vw;
+  top: -37px;
   font-size: 1.4vw;
   width: 16.5vw;
 }

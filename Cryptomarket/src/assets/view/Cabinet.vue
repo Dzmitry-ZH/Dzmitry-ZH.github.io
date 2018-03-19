@@ -19,11 +19,11 @@
                       <label for="exchange">Биржа:</label>
                       <input type="text" class="form-control" id="exchange" required>
                     </div>
-                    <div class="list-group">
+                    <div class="form-group">
                       <label for="pair">Валютная пара:</label>
-                      <input list="tradePair" name="tradePair" id="pair">
+                      <input list="tradePair" class="form-control" name="tradePair" id="pair">
                       <datalist id="tradePair">
-                        <option class="list-group-item" v-for="coin in coins" :value="coin.name">{{coin.symbol}} -
+                        <option v-for="coin in coinsDefault" :value="coin.name">{{coin.symbol}} -
                           {{coin.price_usd | currency('$')}}
                         </option>
                       </datalist>
@@ -35,6 +35,10 @@
                     <div class="form-group">
                       <!--<date-picker v-model="time1" :first-day-of-week="1" lang='ru'></date-picker>-->
                       <date-picker2 :date="startTime" :option="option"></date-picker2>
+                    </div>
+                    <div class="form-group">
+                      <label for="notice">Примечание:</label>
+                      <textarea class="form-control" id="notice" cols="30" rows="3.8"></textarea>
                     </div>
                   </form>
                 </div>
@@ -61,7 +65,9 @@
     data() {
       return {
         coins: [],
+        coinsDefault: [],
         coinData: [],
+        getcoin: '',
         CRYPTOCOMPARE_API_URI: "https://min-api.cryptocompare.com/data/all/coinlist",
         COINMARKETCAP_API_URI: "https://api.coinmarketcap.com/v1/ticker/?limit=100",
         IMAGE_URL: "https://www.cryptocompare.com",
@@ -69,7 +75,6 @@
         showModal: false,
         time1: '',
         time2: '',
-        gettime:'',
         shortcuts: [
           {
             text: 'Today',
@@ -85,57 +90,36 @@
         },
         option: {
           type: 'day',
-          week: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
-          month: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-          format: 'YYYY-DD-MM',
+          week: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Суб', 'Вск'],
+          month: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+          format: 'YYYY-MM-DD',
           placeholder: 'Выберите дату',
           inputStyle: {
             'display': 'inline-block',
             'padding': '6px',
             'line-height': '22px',
-            'font-size': '16px',
+            'font-size': '1.4VW',
             'border': '2px solid #fff',
             'box-shadow': '0 1px 3px 0 rgba(0, 0, 0, 0.2)',
             'border-radius': '2px',
             'color': '#5F5F5F'
           },
           color: {
-            header: '#ccc',
-            headerText: '#f00'
+            header: '#0275D8',
+            headerText: 'white'
           },
           buttons: {
-            ok: 'Ok',
-            cancel: 'Cancel'
+            ok: 'Сегодня',
+            cancel: 'Закрыть'
           },
           overlayOpacity: 0.5, // 0.5 as default
           dismissible: true // as true as default
-        },
-        timeoption: {
-          type: 'min',
-          week: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
-          month: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-          format: 'YYYY-MM-DD HH:mm'
-        },
-        multiOption: {
-          type: 'multi-day',
-          week: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
-          month: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-          format:"YYYY-MM-DD HH:mm"
-        },
-        limit: [{
-          type: 'weekday',
-          available: [1, 2, 3, 4, 5]
-        },
-          {
-            type: 'fromto',
-            from: '2016-02-01',
-            to: '2016-02-20'
-          }]
+        }
       }
     },
     components: {
       'date-picker': DatePicker,
-      'date-picker2':myDatepicker
+      'date-picker2': myDatepicker
     },
     methods: {
       getCoinsInterval: function () {
@@ -150,6 +134,7 @@
         axios.get(this.COINMARKETCAP_API_URI)
           .then((resp) => {
             this.coins = resp.data;
+            this.coinsDefault = resp.data;
             return this.coins;
           })
           .catch(err => console.log(err))
@@ -217,14 +202,14 @@
     margin: 0;
   }
 
-  input[name = 'tradePair'] {
-    width: 100%;
-  }
-
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
+  .modal-footer button{
+    margin-top: 0;
   }
 </style>
