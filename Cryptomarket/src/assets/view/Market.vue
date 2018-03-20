@@ -136,11 +136,18 @@
           this.SortDown(this.type);
         }
       },
+      getInformation: function () {
+        let market = {
+          coins: this.coins
+        }
+        this.$emit('addMarket', market);
+      }
     },
     created: function () {
       this.getCoinData();
       this.getCoins();
       this.getCoinsInterval();
+      this.getInformation();
     }
   }
 </script>

@@ -61,6 +61,11 @@
           firebase.auth().createUserWithEmailAndPassword(this.user.email, this.user.password)
             .then(response => {
               response.updateProfile({displayName: this.user.name});
+              console.log(response);
+              let information = {
+                displayName: this.user.name
+              }
+              this.$emit('addUser', information);
               this.signSuccess = true;
               this.signError = false;
               this.errorPassword = false;

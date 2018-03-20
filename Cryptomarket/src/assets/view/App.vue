@@ -19,11 +19,9 @@
       <router-link to='/cabinet'>
         <button class="btn btn-outline-primary">Личный кабинет</button>
       </router-link>
-      <!--<router-link to='/'>-->
       <button class="btn btn-outline-primary" @click="logoutUser">Выйти</button>
-      <!--</router-link>-->
     </div>
-    <span class="registeredUser" v-if="signComplete">{{name}} – {{email}}</span>
+    <span class="registeredUser" v-if="signComplete">{{registrationName}}{{name}} – {{email}}</span>
     <h1>{{title}}</h1>
     <nav>
       <ul>
@@ -39,8 +37,7 @@
         <li></li>
       </ul>
     </nav>
-    <router-view
-      @addUser='email = $event.email, uid = $event.uid, signComplete = $event.signComplete, name = $event.displayName'></router-view>
+    <router-view @addUser='registrationName = $event.displayName'></router-view>
   </div>
 </template>
 <script>
@@ -56,6 +53,7 @@
         email: '',
         uid: '',
         name: '',
+        registrationName: '',
         signComplete: false,
         COINMARKETCAP_API_URI_TOTAL: "https://api.coinmarketcap.com/v1/global/",
         UPDATE_INTERVAL: 6000,
@@ -90,7 +88,7 @@
             this.uid = user.uid;
             this.name = user.displayName;
             this.signComplete = true;
-            console.log(this);
+            // console.log(this);
           } else {
             console.log('Вышел');
             this.signComplete = false;

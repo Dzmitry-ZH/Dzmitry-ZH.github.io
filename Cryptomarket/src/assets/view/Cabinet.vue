@@ -67,6 +67,7 @@
         coins: [],
         coinsDefault: [],
         coinData: [],
+        coinsFromMarket:'',
         getcoin: '',
         CRYPTOCOMPARE_API_URI: "https://min-api.cryptocompare.com/data/all/coinlist",
         COINMARKETCAP_API_URI: "https://api.coinmarketcap.com/v1/ticker/?limit=100",
@@ -109,7 +110,6 @@
             headerText: 'white'
           },
           buttons: {
-            ok: 'Сегодня',
             cancel: 'Закрыть'
           },
           overlayOpacity: 0.5, // 0.5 as default
@@ -209,7 +209,7 @@
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
   }
 
-  .modal-footer button{
+  .modal-footer button {
     margin-top: 0;
   }
 </style>

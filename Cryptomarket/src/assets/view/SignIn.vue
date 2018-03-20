@@ -42,13 +42,6 @@
         firebase.auth().signInWithEmailAndPassword(this.user.email, this.user.password)
           .then(response => {
             console.log(response);
-            let information = {
-              email: response.email,
-              uid: response.uid,
-              displayName: response.displayName,
-              signComplete: true
-            }
-            this.$emit('addUser', information);
             this.signSuccess = true;
             this.visible = false;
             this.signError = false;
