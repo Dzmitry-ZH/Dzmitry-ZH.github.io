@@ -135,26 +135,26 @@
         if (this.sortDirection === 'up') {
           this.SortDown(this.type);
         }
-      },
-      getInformation: function () {
-        let market = {
-          coins: this.coins
-        }
-        this.$emit('addMarket', market);
       }
     },
     created: function () {
       this.getCoinData();
       this.getCoins();
       this.getCoinsInterval();
-      this.getInformation();
     }
   }
 </script>
 
 <style scoped>
-  #market {
-    min-height: 40vw;
+
+  .table {
+    width: 85vw;
+    margin: 0 auto 10vw;
+    font-size: 1.3vw;
+  }
+
+  .table thead td {
+    border-top: none;
   }
 
   thead tr td[data-type] {

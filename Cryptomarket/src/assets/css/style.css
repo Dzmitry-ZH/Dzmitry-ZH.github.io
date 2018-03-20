@@ -61,16 +61,6 @@ table.header span {
   color: black;
 }
 
-.table {
-  width: 85vw;
-  margin: 0 auto 10vw;
-  font-size: 1.3vw;
-}
-
-.table thead td {
-  border-top: none;
-}
-
 #market, #news, #post, #about, #cabinet {
   position: relative;
 }

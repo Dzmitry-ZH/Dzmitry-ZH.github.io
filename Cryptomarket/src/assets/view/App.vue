@@ -37,7 +37,7 @@
         <li></li>
       </ul>
     </nav>
-    <router-view @addUser='registrationName = $event.displayName'></router-view>
+    <router-view @addUser='registrationName = $event.displayName' :uid = 'uid'></router-view>
   </div>
 </template>
 <script>
@@ -125,6 +125,7 @@
     position: absolute;
     top: 5vw;
     right: 7vw;
+    font-size: 1.4vw;
   }
 
   ::-webkit-input-placeholder {

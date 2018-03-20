@@ -27,13 +27,14 @@
         <td>{{item.exchange}}</td>
         <td>{{item.tradePair}}{{'/USD'}}</td>
         <td>{{item.coinAmount}}</td>
-        <td>{{cost}}</td>
+        <td>{{item.product}}</td>
         <td>{{item.date.time}}</td>
         <td>{{item.notice}}</td>
         <td @click='deleteDeposit(item.key,index)'><i class="fas fa-trash"></i></td>
       </tr>
       </tbody>
     </table>
+    <span>{{totalSum}}</span>
     <div v-if="showModal">
       <transition name="modal">
         <div class="modal-mask">
@@ -94,7 +95,7 @@
   import myDatepicker from 'vue-datepicker';
 
   export default {
-    name: "cabinet",
+    name: "cabinet-new",
     data() {
       return {
         coins: [],
@@ -102,11 +103,13 @@
         coinData: [],
         data: [],
         dataGet: [],
+        totalSum: 0,
         cost: 'Стоимость $',
         deposit: {
           exchange: '',
           coinAmount: '',
           tradePair: '',
+          product: '',
           date: {time: ''},
           notice: '',
         },
@@ -173,6 +176,14 @@
           .then((resp) => {
             // console.log(resp.data[this.uid]);
             this.dataGet = Object.values(resp.data[this.uid]);
+            for (let i = 0; i < this.dataGet.length; i++) {
+              let searchPair = this.dataGet[i].tradePair;
+              let coin = this.coins.filter(function (item) {
+                return item.symbol === searchPair;
+              })[0];
+              this.dataGet[i].product = coin.price_usd * this.dataGet[i].coinAmount;
+              this.totalSum +=  this.dataGet[i].product;
+            }
             console.log(this.data);
           })
           .catch((err) => {
@@ -195,7 +206,7 @@
       deleteDeposit: function (key, index) {
         axios.delete('https://cryptomarket-30130.firebaseio.com/users/' + this.uid + '/' + key + '.json')
           .then(resp => {
-            // console.log('delete');
+            console.log('delete');
             this.getDeposit();
             document.getElementsByClassName('trDeposit')[index].style.display = 'none';
 
