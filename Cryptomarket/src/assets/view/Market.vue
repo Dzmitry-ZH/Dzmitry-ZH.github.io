@@ -205,8 +205,4 @@
   thead tr td:nth-of-type(9) {
     width: 15vw;
   }
-
-  .no-transition {
-    transition: none !important;
-  }
 </style>

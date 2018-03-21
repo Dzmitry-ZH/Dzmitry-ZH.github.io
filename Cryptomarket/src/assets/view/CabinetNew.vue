@@ -1,40 +1,53 @@
 <template>
   <div id="cabinet">
-    <li class="search"><input type="text" class="form-control search-input" placeholder="search..."></li>
+    <li class="search"><input type="text" class="form-control search-input" v-model="search" placeholder="search...">
+    </li>
     <table class="table table-hover table-responsive">
       <thead>
       <tr>
         <td>Биржа</td>
         <td>Валютная пара</td>
         <td>Монеты</td>
-        <td>Стоимость</td>
+        <td>Цена(USD)</td>
+        <td>Общая стоимость</td>
+        <td>1H</td>
+        <td>1D</td>
+        <td>1W</td>
         <td>Дата</td>
         <td>Примечание</td>
         <td></td>
       </tr>
       </thead>
       <tbody>
-      <tr class="trDeposit" v-for="(item,index) in data">
+      <tr class="trDeposit" v-for="(item,index) in filterBy(data,search)">
         <td>{{item.exchange}}</td>
         <td>{{item.tradePair}}{{'/USD'}}</td>
         <td>{{item.coinAmount}}</td>
-        <td>{{cost}}</td>
+        <td>{{item.price | currency}}</td>
+        <td>{{item.product | currency('$',2)}}</td>
+        <td :style="getColor(item.change1h)"><span v-if="item.change1h > 0">+</span>{{item.change1h}}%</td>
+        <td :style="getColor(item.change1d)"><span v-if="item.change1d > 0">+</span>{{item.change1d}}%</td>
+        <td :style="getColor(item.change1w)"><span v-if="item.change1w > 0">+</span>{{item.change1w}}%</td>
         <td>{{item.date.time}}</td>
         <td>{{item.notice}}</td>
         <td @click='deleteDeposit(item.key,index)'><i class="fas fa-trash"></i></td>
       </tr>
-      <tr class="trDeposit" v-for="(item,index) in dataGet">
+      <tr class="trDeposit" v-for="(item,index) in filterBy(dataGet,search)">
         <td>{{item.exchange}}</td>
         <td>{{item.tradePair}}{{'/USD'}}</td>
         <td>{{item.coinAmount}}</td>
-        <td>{{item.product}}</td>
+        <td>{{item.price | currency}}</td>
+        <td>{{item.product | currency('$',2)}}</td>
+        <td :style="getColor(item.change1h)"><span v-if="item.change1h > 0">+</span>{{item.change1h}}%</td>
+        <td :style="getColor(item.change1d)"><span v-if="item.change1d > 0">+</span>{{item.change1d}}%</td>
+        <td :style="getColor(item.change1w)"><span v-if="item.change1w > 0">+</span>{{item.change1w}}%</td>
         <td>{{item.date.time}}</td>
         <td>{{item.notice}}</td>
         <td @click='deleteDeposit(item.key,index)'><i class="fas fa-trash"></i></td>
       </tr>
       </tbody>
     </table>
-    <span>{{totalSum}}</span>
+    <!--<p>Итого:{{totalSum | currency('$',2)}}</p>-->
     <div v-if="showModal">
       <transition name="modal">
         <div class="modal-mask">
@@ -55,11 +68,9 @@
                     </div>
                     <div class="form-group">
                       <label for="pair">Валютная пара:</label>
-                      <input list="tradePair" class="form-control" name="tradePair" id="pair"
-                             v-model="deposit.tradePair">
+                      <input list="tradePair" class="form-control" name="tradePair" id="pair" v-model="deposit.tradePair">
                       <datalist id="tradePair">
-                        <option v-for="coin in coinsDefault" :value="coin.symbol">{{coin.name}} -
-                          {{coin.price_usd | currency('$')}}
+                        <option v-for="coin in coinsDefault" :value="coin.symbol">{{coin.name}} - {{coin.price_usd | currency('$')}}
                         </option>
                       </datalist>
                     </div>
@@ -72,8 +83,7 @@
                     </div>
                     <div class="form-group">
                       <label for="notice">Примечание:</label>
-                      <textarea class="form-control" id="notice" cols="30" rows="3.8"
-                                v-model="deposit.notice"></textarea>
+                      <textarea class="form-control" id="notice" cols="30" rows="3.8" v-model="deposit.notice"></textarea>
                     </div>
                   </form>
                 </div>
@@ -104,12 +114,16 @@
         data: [],
         dataGet: [],
         totalSum: 0,
-        cost: 'Стоимость $',
+        search: '',
         deposit: {
           exchange: '',
           coinAmount: '',
           tradePair: '',
+          price: '',
           product: '',
+          change1h: '',
+          change1d: '',
+          change1w: '',
           date: {time: ''},
           notice: '',
         },
@@ -182,7 +196,11 @@
                 return item.symbol === searchPair;
               })[0];
               this.dataGet[i].product = coin.price_usd * this.dataGet[i].coinAmount;
-              this.totalSum +=  this.dataGet[i].product;
+              this.dataGet[i].price = coin.price_usd;
+              this.dataGet[i].change1h = coin.percent_change_1h;
+              this.dataGet[i].change1d = coin.percent_change_24h;
+              this.dataGet[i].change1w = coin.percent_change_7d;
+              // this.totalSum += this.dataGet[i].product;
             }
             console.log(this.data);
           })
@@ -198,6 +216,18 @@
           .then(resp => {
             console.log(resp.data);
             this.data.push(Object.values(resp.data)[0]);
+            for (let i = 0; i < this.data.length; i++) {
+              let searchPair = this.data[i].tradePair;
+              let coin = this.coins.filter(function (item) {
+                return item.symbol === searchPair;
+              })[0];
+              this.data[i].product = coin.price_usd * this.data[i].coinAmount;
+              this.data[i].price = coin.price_usd;
+              this.data[i].change1h = coin.percent_change_1h;
+              this.data[i].change1d = coin.percent_change_24h;
+              this.data[i].change1w = coin.percent_change_7d;
+              // this.totalSum += this.data[i].product;
+            }
           })
           .catch(function (error) {
             console.log(error)
@@ -209,12 +239,14 @@
             console.log('delete');
             this.getDeposit();
             document.getElementsByClassName('trDeposit')[index].style.display = 'none';
-
           })
           .catch(function (error) {
             console.log(error)
           });
-      }
+      },
+      getColor: (num) => {
+        return num >= 0 ? "color:green;" : "color:red;";
+      },
     },
     created: function () {
       this.getCoins();
@@ -230,20 +262,18 @@
   }
 
   .table {
-    width: 85vw;
+    width: 100%;
     margin: 0 auto;
     font-size: 1.3vw;
   }
 
   tbody tr td,
   thead tr td {
-    width: calc(80vw / 6);
+    width: calc(100% / 11);
   }
 
-  tbody tr td:nth-of-type(7),
-  thead tr td:nth-of-type(7) {
-    width: 5vw;
-    text-align: center;
+  tbody tr td:nth-of-type(11),
+  thead tr td:nth-of-type(11) {
     cursor: pointer;
   }
 
@@ -254,7 +284,6 @@
   .search-input {
     position: relative;
     right: -7.5vw;
-    pointer-events: none;
   }
 
   button {
@@ -299,6 +328,11 @@
 
   .close {
     margin: 0;
+  }
+
+  p {
+    float: right;
+    margin-top: 2vw;
   }
 
   input::-webkit-outer-spin-button,
