@@ -1,0 +1,125 @@
+.background {
+    height: 120vh;
+}
+
+.ibg-bg {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    background-blend-mode: darken;
+}
+
+header {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 9999;
+}
+
+header img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    margin-left: 50px;
+}
+
+header a:nth-of-type(2) {
+    float: right;
+    line-height: 70px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+    color: #313131;
+    margin-right: 50px;
+}
+
+header a:nth-of-type(2):hover {
+    color: #008ed6;
+    transition: .5s;
+}
+
+.setka {
+    position: absolute;
+    top: 155px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h1 {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 56px;
+}
+
+h5 {
+    position: absolute;
+    top: 85%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+button {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn {
+    font-size: 28px;
+}
+
+.clients {
+    border-bottom: 1px solid #dadfe3;
+    overflow: hidden;
+
+}
+
+.clients ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+
+.clients ul li {
+    margin: 30px;
+    transition: .5s;
+    display: inline-block;
+}
+
+.clients ul li img {
+    height: 40px;
+    filter: grayscale(1);
+    opacity: .6;
+    transition: .8s;
+}
+
+.clients ul li img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+    transition: .8s;
+}
+
+.description {
+    padding: 80px 50px 115px;
+}
+
+.description h2 {
+    color: #1393dd;
+}
+
+.colored-line-left {
+    width: 80px;
+    height: 3px;
+    background-color: #008ed6;
+}
