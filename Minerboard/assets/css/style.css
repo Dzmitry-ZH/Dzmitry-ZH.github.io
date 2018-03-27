@@ -1,3 +1,7 @@
+html{
+    overflow-x: hidden;
+}
+
 .background {
     height: 120vh;
 }
@@ -15,6 +19,7 @@ header {
     background-color: white;
     width: 100%;
     z-index: 9999;
+    box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.08);
 }
 
 header img {
@@ -23,6 +28,7 @@ header img {
     bottom: 0;
     margin: auto;
     margin-left: 50px;
+    max-width: 100%;
 }
 
 header a:nth-of-type(2) {
@@ -47,7 +53,7 @@ header a:nth-of-type(2):hover {
     transform: translateX(-50%);
 }
 
-h1 {
+.background h1 {
     position: absolute;
     top: 72%;
     left: 50%;
@@ -56,7 +62,7 @@ h1 {
     font-size: 56px;
 }
 
-h5 {
+.background h5 {
     position: absolute;
     top: 85%;
     left: 0;
@@ -110,8 +116,19 @@ button {
     transition: .8s;
 }
 
+main {
+    /*border: 2px solid red;*/
+}
+
 .description {
     padding: 80px 50px 115px;
+    /*border: 1px solid black;*/
+}
+
+.description:after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .description h2 {
@@ -122,4 +139,59 @@ button {
     width: 80px;
     height: 3px;
     background-color: #008ed6;
+}
+
+.text {
+    width: 50%;
+    float: left;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.text p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.kirka {
+    float: right;
+    margin-top: -50px;
+    overflow: hidden;
+}
+
+.kirka img {
+    pointer-events: none;
+}
+
+.mining {
+    clear: both;
+    background-color: #F7F8FA;
+}
+
+.mining-header {
+    padding: 90px 0 60px;
+}
+
+.mining-header h2 {
+    margin: 0 0 20px;
+    text-align: center;
+    color: #1393DD;
+}
+
+.colored-line-center {
+    width: 80px;
+    height: 2.5px;
+    background-color: #008ed6;
+    margin: 0 auto;
+}
+
+.sub-heading{
+    margin-top: 20px;
+}
+
+.sub-heading p{
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
 }
