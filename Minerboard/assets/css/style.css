@@ -6,6 +6,38 @@
     font-style: normal;
 }
 
+.loading {
+    /*overflow: hidden;*/
+    height: 100vh;
+}
+
+/*.loading::-webkit-scrollbar {*/
+/*width: 0px;*/
+/*background: rgba(255, 255, 255, 0.0);*/
+/*}*/
+
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 99999;
+}
+
+#preloader .status {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+    background: url('../img/loader-blue.gif') no-repeat;
+    background-size: contain;
+}
+
 .icon-ecommerce-graph3:before {
     font-family: stamp-icons !important;
     content: "\e05a";
@@ -69,6 +101,12 @@ header a:nth-of-type(2):hover {
     transform: translateX(-50%);
 }
 
+.setka img {
+    pointer-events: none;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+}
+
 .background h1 {
     position: absolute;
     top: 72%;
@@ -76,6 +114,9 @@ header a:nth-of-type(2):hover {
     transform: translateX(-50%);
     color: white;
     font-size: 56px;
+    animation-duration: 2.5s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
 }
 
 .background h5 {
@@ -84,8 +125,12 @@ header a:nth-of-type(2):hover {
     left: 0;
     right: 0;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     color: white;
+    animation-duration: 2.5s;
+    animation-delay: 2.5s;
+    animation-timing-function: ease-in-out;
+
 }
 
 .background button {
@@ -313,6 +358,7 @@ footer {
 footer img {
     width: 255px;
     margin-bottom: 40px;
+    pointer-events: none;
 }
 
 footer p {
@@ -336,11 +382,11 @@ footer i:hover {
     transition: .5s;
 }
 
-.how{
+.how {
     margin-top: 70px;
 }
 
-.text-how{
+.text-how {
     margin-top: 20px;
 }
 
