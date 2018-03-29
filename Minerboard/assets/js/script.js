@@ -1,3 +1,5 @@
+new WOW().init();
+
 $(window).on('load', function () {
     var $preloader = $('#preloader'),
         $spinner = $preloader.find('.status');
@@ -74,3 +76,12 @@ sr.reveal('.service-box', {
     scale: 1,
     easing: 'ease-out'
 }, 200)
+
+sr.reveal('.contacts-link', {
+    duration: 900,
+    delay: 1100,
+    origin: 'bottom',
+    distance: "100px",
+    scale: 1,
+    easing: 'ease-out'
+});

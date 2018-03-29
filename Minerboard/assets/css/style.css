@@ -135,7 +135,7 @@ header a:nth-of-type(2):hover {
 
 .background button {
     position: absolute;
-    top: 100%;
+    top: 101%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -301,9 +301,9 @@ main {
     margin-bottom: 35px;
 }
 
-.parallax-window {
-    background: rgba(0, 5, 8, 0.80);
-}
+/*.parallax-window {*/
+    /*background: rgba(0, 5, 8, 0.80);*/
+/*}*/
 
 .parallax-content {
     padding: 100px;
