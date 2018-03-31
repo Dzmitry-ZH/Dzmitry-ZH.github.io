@@ -1,0 +1,334 @@
+/*iPad Pro landscape*/
+@media screen and (max-width: 1366px) and (min-height: 1024px) {
+
+    .setka img, .background h1, .background h5, .background button {
+        animation-delay: 0s;
+        animation-duration: 0s;
+    }
+
+    .background {
+        height: 100vh;
+    }
+
+    .background h1 {
+        top: 50%;
+    }
+
+    .background h5 {
+        top: 60%;
+    }
+
+    .background button {
+        top: 75%;
+    }
+
+    .service-box {
+        flex-basis: 400px;
+    }
+}
+
+/*iPad Pro portrait*/
+@media screen and (max-width: 1024px) and (max-height: 1366px) {
+
+    .setka img, .background h1, .background h5, .background button {
+        animation-delay: 0s;
+        animation-duration: 0s;
+    }
+
+    .background {
+        height: 50vh;
+    }
+
+    .background h1 {
+        top: 55%;
+    }
+
+    .background h5 {
+        top: 65%;
+    }
+
+    .background button {
+        top: 80%;
+    }
+
+    .service-box {
+        flex-basis: 300px;
+    }
+
+}
+
+/*iPad landscape*/
+@media screen and (max-width: 1024px) and (max-height: 768px) {
+
+    .background {
+        height: 100vh;
+    }
+
+    .service-box {
+        flex-basis: 300px;
+    }
+}
+
+/*iPad portrait*/
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+
+    .background h1 {
+        top: 63%;
+    }
+
+    .background h5 {
+        top: 73%;
+    }
+
+    .background button {
+        top: 85%;
+    }
+
+    .description {
+        flex-direction: column-reverse;
+        padding: 60px 15px 40px;
+    }
+
+    .description-text {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .description-text .colored-line-left {
+        margin: 0 auto;
+    }
+
+    .kirka {
+        padding: 0;
+        text-align: center;
+    }
+
+    .service-box {
+        flex-basis: 355px;
+    }
+
+    .mining-header {
+        padding: 45px 30px;
+    }
+
+    .services-wrap {
+        padding: 0 15px;
+    }
+}
+
+/*iPhone X portrait*/
+@media screen and (max-width: 375px) and (max-height: 812px) {
+
+    header {
+        position: absolute;
+    }
+
+    header img {
+        margin-left: 20px;
+    }
+
+    header a:nth-of-type(2) {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .background {
+        height: 100vh;
+    }
+
+    .background h1 {
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        font-size: 10vw;
+    }
+
+    .background h5 {
+        top: 60%;
+        width: 100%;
+        text-align: center;
+        font-size: 6vw;
+        line-height: 8vw;
+        padding: 0 20px;
+    }
+
+    .background button {
+        top: 80%;
+        padding: 10px 20px;
+        font-size: 6vw;
+    }
+
+    .clients ul li {
+        margin: 20px;
+    }
+
+    .clients ul li img {
+        height: 6vw;
+    }
+
+    .description {
+        padding: 40px 10px;
+    }
+
+    .description-text {
+        margin-top: 20px;
+    }
+
+    .description-text .text p {
+        font-size: 5vw;
+        text-align: left;
+        text-align: justify;
+    }
+
+    .kirka img {
+        width: 60vw;
+    }
+
+    .mining-header {
+        width: 100%;
+        padding: 45px 10px;
+    }
+
+    .sub-heading p {
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    .services-wrap {
+        padding: 0 10px;
+    }
+
+    .service-box h3 {
+        font-size: 1.75rem;
+    }
+
+    .service-box p {
+        font-weight: normal;
+    }
+
+    .parallax-content {
+        padding: 40px;
+    }
+
+    .parallax-content h2 {
+        width: 100%;
+        font-size: 5vw;
+        margin: 0 0 40px;
+    }
+
+    .parallax-content button {
+        font-size: 1rem;
+    }
+
+    .contacts-link p {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 40px 0;
+    }
+
+    footer a {
+        font-size: 1.5rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}
+
+/*iPhone X landscape*/
+@media screen and (max-width: 812px) and (max-height: 375px) {
+
+    header {
+        position: absolute;
+    }
+
+    header img {
+        margin-left: 20px;
+    }
+
+    header a:nth-of-type(2) {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .background {
+        height: 150vh;
+    }
+
+    .background h1 {
+        top: 58%;
+    }
+
+    .background h5 {
+        top: 68%;
+        font-size: 2.2vw;
+    }
+
+    .background button {
+        top: 80%;
+        font-size: 3.5vw;
+    }
+
+    .clients ul li {
+        margin: 20px;
+    }
+
+    .clients ul li img {
+        height: 4vw;
+    }
+
+    .description-text .text p {
+        font-size: 2vw;
+    }
+
+    .kirka {
+        margin: auto;
+    }
+
+    .sub-heading p {
+        font-size: 2vw;
+    }
+
+    .service-box {
+        flex-basis: 340px;
+    }
+
+    .service-box h3 {
+        font-size: 2.5vw;
+    }
+
+    .parallax-content {
+        padding: 40px;
+    }
+
+    .parallax-content h2 {
+        width: 90%;
+        font-size: 4vw;
+        margin-bottom: 40px;
+    }
+
+    .parallax-content button {
+        font-size: 3vw;
+    }
+
+    .contacts-link p {
+        font-size: 2.5vw;
+    }
+
+    footer a {
+        font-size: 4vw;
+    }
+
+    footer p {
+        font-size: 2.5vw;
+    }
+
+}

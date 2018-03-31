@@ -16,6 +16,7 @@
     <title>Minerboard | Mining Software</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/mediaqueries.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon_package_v0.16/apple-touch-icon.png">
@@ -24,7 +25,7 @@
     <link rel="manifest" href="assets/img/favicon_package_v0.16/site.webmanifest">
     <link rel="mask-icon" href="assets/img/favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="theme-color" content="#313131">
+    <meta name="theme-color" content="#008ed6">
 </head>
 <body class="loading">
 <div id="preloader">
@@ -32,15 +33,22 @@
 </div>
 <header>
     <a href="index.html"><img src="assets/img/MBFULL_small.png" alt="Minerboard"></a>
-    <a href="how.html" target="_blank">How it works</a>
+    <a href="how.html">How it works</a>
 </header>
+<input type="checkbox" id="hmt" class="hidden-menu-ticker">
+<label class="hamburger-menu" for="hmt">
+    <span class="icon-bar"></span>
+</label>
+<div class="hidden-menu">
+    <a href="how.html">How it works</a>
+</div>
 <div class="wrapper">
     <div class="background" data-ibg-bg="assets/img/background.jpg">
         <div class="setka"><img src="assets/img/setka2.png" alt="Setka" class="animated fadeIn">
         </div>
         <h1 class="animated fadeIn">Mine like a pro</h1>
         <h5 class="animated fadeIn">Free easy-to-use software for monitoring & managing all types of mining equipment</h5>
-        <button class="btn btn-primary wow fadeIn" data-wow-duration='4s' onclick="window.open('how.html', '_blank')">Read More</button>
+        <button class="btn btn-primary wow fadeIn" onclick="parent.location ='how.html';">Read More</button>
     </div>
     <main>
         <div class="clients">
@@ -51,23 +59,26 @@
             </ul>
         </div>
         <div class="description">
-            <h2>Why do we do it?</h2>
-            <div class="colored-line-left">
-            </div>
-            <div class="text enter-left">
-                <p>Our team have much experience in the area of large-scale mining, equipment optimization,
-                    cryptocurrency
-                    market forecasting, and we know how to do it the best way.</p>
-                <p>During our work, we found a lot of particular features and know-hows that allowed us to maximize
-                    results
-                    and make mining less complicated.</p>
-                <p>By launching Minerboard we would like to share our insights with the rest of the world.</p>
-                <p>We created a unique mining software that is easy to apply and can bring your mining activities to the
-                    whole new level: now any person can have access our hands-on experience in getting the most profit
-                    from
-                    mining and do it the least complicated way.</p>
-                <p>Join us in making cryptocurrency mining better!</p>
-
+            <div class="description-text">
+                <h2>Why do we do it?</h2>
+                <div class="colored-line-left">
+                </div>
+                <div class="text enter-left">
+                    <p>Our team have much experience in the area of large-scale mining, equipment optimization,
+                        cryptocurrency
+                        market forecasting, and we know how to do it the best way.</p>
+                    <p>During our work, we found a lot of particular features and know-hows that allowed us to maximize
+                        results
+                        and make mining less complicated.</p>
+                    <p>By launching Minerboard we would like to share our insights with the rest of the world.</p>
+                    <p>We created a unique mining software that is easy to apply and can bring your mining activities to
+                        the
+                        whole new level: now any person can have access our hands-on experience in getting the most
+                        profit
+                        from
+                        mining and do it the least complicated way.</p>
+                    <p>Join us in making cryptocurrency mining better!</p>
+                </div>
             </div>
             <div class="kirka">
                 <img src="assets/img/kirka2.png" alt="Kirka" class="enter-right">
@@ -116,17 +127,19 @@
                 </div>
             </div>
         </div>
-        <div class="parallax-window" data-parallax="scroll" data-image-src="assets/img/Network-optimization-Global-Communications_1.jpg">
+        <div class="parallax-window" data-parallax="scroll" iosFix="false" andoidFix="false" data-image-src="assets/img/Network-optimization-Global-Communications_1.jpg">
             <div class="parallax-content">
                 <h2 class="enter-top">Minerboard saves your time and optimizes performance of your mining farm</h2>
                 <button class="btn btn-primary enter-down" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSf3CCBYb-u0rhWu62m8vJZTRkAvpzn9BET0rSJYjsCBkd9c9g/viewform', '_blank')">Join</button>
             </div>
         </div>
         <div class="contacts-link">
-            <a href="mailto:join@minerboard.com">
-                <i class="fa icon-mail"></i>
-                <p>join@minerboard.com</p>
-            </a>
+            <div class="contacts-animate">
+                <a href="mailto:join@minerboard.com">
+                    <i class="fa icon-mail"></i>
+                    <p>join@minerboard.com</p>
+                </a>
+            </div>
         </div>
     </main>
     <footer>

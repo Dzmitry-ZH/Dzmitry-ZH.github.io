@@ -75,9 +75,9 @@ sr.reveal('.service-box', {
     distance: "100px",
     scale: 1,
     easing: 'ease-out'
-}, 200)
+}, 200);
 
-sr.reveal('.contacts-link', {
+sr.reveal('.contacts-animate', {
     duration: 900,
     delay: 1100,
     origin: 'bottom',
