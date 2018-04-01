@@ -47,10 +47,6 @@
         flex-basis: 48%;
     }
 
-    .service-box p {
-        font-weight: normal;
-    }
-
     .parallax-content h2 {
         width: 100%;
         font-size: 3.8vw;
@@ -147,10 +143,6 @@
         font-size: 2.5vw;
     }
 
-    .service-box p {
-        font-weight: normal;
-    }
-
     .service-box {
         -ms-flex-preferred-size: 48%;
         flex-basis: 48%;
@@ -244,7 +236,6 @@
     .description-text .text p {
         font-size: 5vw;
         text-align: justify;
-        font-weight: normal;
     }
 
     .kirka img {
@@ -259,7 +250,6 @@
     .sub-heading p {
         font-size: 5vw;
         text-align: center;
-        font-weight: normal;
     }
 
     .services-wrap {
@@ -273,10 +263,6 @@
     .service-box {
         -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
-    }
-
-    .service-box p {
-        font-weight: normal;
     }
 
     .parallax-content {
@@ -361,7 +347,6 @@
 
     .description-text .text p {
         font-size: 2.5vw;
-        font-weight: normal;
     }
 
     .kirka {
@@ -374,7 +359,6 @@
 
     .sub-heading p {
         font-size: 2.3vw;
-        font-weight: normal;
     }
 
     .service-box {
@@ -459,7 +443,6 @@
 
     .description-text .text p {
         font-size: 5vw;
-        font-weight: normal;
     }
 
     .mining-header {
@@ -468,11 +451,6 @@
 
     .service-box h3 {
         font-size: 6vw;
-        font-weight: normal;
-    }
-
-    .service-box p {
-        font-weight: normal;
     }
 
     .parallax-content button {
@@ -526,12 +504,10 @@
 
     .description-text .text p {
         font-size: 2.5vw;
-        font-weight: normal;
     }
 
     .sub-heading p {
         font-size: 3vw;
-        font-weight: normal;
     }
 
     .service-box {
@@ -664,12 +640,10 @@
 
     .description-text .text p {
         font-size: 3.2vw;
-        font-weight: normal;
     }
 
     .sub-heading p {
         font-size: 3.2vw;
-        font-weight: normal;
     }
 
     .service-box {
