@@ -182,7 +182,8 @@ header a:nth-of-type(2):hover,
     height: 50px;
 }
 
-.hidden-menu-ticker:checked ~ .wrapper {
+.hidden-menu-ticker:checked ~ .wrapper,
+.hidden-menu-ticker:checked ~ .description-how {
     margin-top: 120px;
 }
 
@@ -287,8 +288,7 @@ header a:nth-of-type(2):hover,
     display: flex;
 }
 
-.description-text h2,
-.description-how h2 {
+.description-text h2 {
     color: #1393dd;
 }
 
@@ -296,21 +296,18 @@ header a:nth-of-type(2):hover,
     text-transform: uppercase;
 }
 
-.description-text .colored-line-left,
-.description-how .colored-line-left {
+.description-text .colored-line-left {
     width: 80px;
     height: 3px;
     background-color: #008ed6;
 }
 
-.description-text .text,
-.description-how .text {
+.description-text .text {
     margin-top: 40px;
     text-align: justify;
 }
 
-.description-text .text p,
-.description-how .text p {
+.description-text .text p {
     margin: 0;
     font-weight: 300;
     font-size: 1.6vw;
@@ -468,6 +465,10 @@ footer p {
     font-size: 1.4vw;
 }
 
+footer a {
+    font-size: 2.5vw;
+}
+
 footer i {
     filter: grayscale(1);
     color: #313131;
@@ -485,14 +486,5 @@ footer i:hover {
 
 .description-how {
     margin-top: 70px;
-}
-
-.text-how {
-    margin-top: 20px;
-}
-
-.text-how p {
-    margin: 0;
-    font-weight: 300;
-    font-size: 20px;
+    transition: .5s;
 }
