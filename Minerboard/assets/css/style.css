@@ -51,6 +51,8 @@ html, body {
 }
 
 .wrapper {
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -68,6 +70,7 @@ header {
     width: 100%;
     background-color: white;
     z-index: 100;
+    -webkit-box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.08);
     box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.08);
 }
 
@@ -84,6 +87,8 @@ header a:nth-of-type(2) {
     line-height: 70px;
     text-decoration: none;
     text-transform: uppercase;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     color: #313131;
     margin-right: 50px;
@@ -98,6 +103,8 @@ header a:nth-of-type(2) {
     overflow: hidden;
     line-height: 50px;
     text-align: center;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -105,12 +112,16 @@ header a:nth-of-type(2) {
     color: #313131;
     text-transform: uppercase;
     text-decoration: none;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
 header a:nth-of-type(2):hover,
 .hidden-menu a:hover {
     color: #008ed6;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -123,6 +134,8 @@ header a:nth-of-type(2):hover,
     position: absolute;
     top: 35px;
     right: 20px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     height: 30px;
     width: 35px;
@@ -135,12 +148,16 @@ header a:nth-of-type(2):hover,
     position: absolute;
     top: 50%;
     left: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 35px;
     height: 4px;
     border-radius: 2px;
     background-color: #008ed6;
     /*display: inline-block;*/
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
 }
 
@@ -153,6 +170,8 @@ header a:nth-of-type(2):hover,
     height: 4px;
     border-radius: 2px;
     background-color: #008ed6;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
 }
 
@@ -170,11 +189,15 @@ header a:nth-of-type(2):hover,
 
 .hidden-menu-ticker:checked ~ .hamburger-menu .icon-bar::before {
     top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
 .hidden-menu-ticker:checked ~ .hamburger-menu .icon-bar::after {
     top: 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
 
@@ -199,12 +222,16 @@ header a:nth-of-type(2):hover,
     position: absolute;
     top: 19%;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 
 .setka img {
     pointer-events: none;
+    -webkit-animation-duration: 3s;
     animation-duration: 3s;
+    -webkit-animation-delay: 1.5s;
     animation-delay: 1.5s;
 }
 
@@ -212,11 +239,16 @@ header a:nth-of-type(2):hover,
     position: absolute;
     top: 60%;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     color: white;
     font-size: 5vw;
+    -webkit-animation-duration: 2.5s;
     animation-duration: 2.5s;
+    -webkit-animation-delay: 2s;
     animation-delay: 2s;
+    -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
 }
 
@@ -229,8 +261,11 @@ header a:nth-of-type(2):hover,
     font-size: 2vw;
     font-weight: 400;
     color: white;
+    -webkit-animation-duration: 2.5s;
     animation-duration: 2.5s;
+    -webkit-animation-delay: 2.5s;
     animation-delay: 2.5s;
+    -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
 
 }
@@ -239,7 +274,10 @@ header a:nth-of-type(2):hover,
     position: absolute;
     top: 84%;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
+    -webkit-animation-duration: 4s;
     animation-duration: 4s;
 }
 
@@ -263,20 +301,28 @@ header a:nth-of-type(2):hover,
 
 .clients ul li {
     margin: 30px;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     display: inline-block;
 }
 
 .clients ul li img {
     height: 3.2vw;
+    -webkit-filter: grayscale(1);
     filter: grayscale(1);
     opacity: .6;
+    -webkit-transition: .8s;
+    -o-transition: .8s;
     transition: .8s;
 }
 
 .clients ul li img:hover {
+    -webkit-filter: grayscale(0);
     filter: grayscale(0);
     opacity: 1;
+    -webkit-transition: .8s;
+    -o-transition: .8s;
     transition: .8s;
 }
 
@@ -286,6 +332,8 @@ header a:nth-of-type(2):hover,
 }
 
 .description {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -355,8 +403,15 @@ header a:nth-of-type(2):hover,
 }
 
 .services-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0 50px;
 }
@@ -369,8 +424,11 @@ header a:nth-of-type(2):hover,
     border-left: 1px solid #eaeaea;
     border-radius: 3px;
     background: white;
+    -webkit-transition: .8s;
+    -o-transition: .8s;
     transition: .8s;
     margin-bottom: 30px;
+    -ms-flex-preferred-size: 360px;
     flex-basis: 360px;
 }
 
@@ -389,6 +447,8 @@ header a:nth-of-type(2):hover,
 
 .service-box:hover {
     border-bottom-color: #008ed6;
+    -webkit-transition: .8s;
+    -o-transition: .8s;
     transition: .8s;
 }
 
@@ -471,22 +531,30 @@ footer a {
 }
 
 footer i {
+    -webkit-filter: grayscale(1);
     filter: grayscale(1);
     color: #313131;
     opacity: .5;
     margin: 0 3px;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
 footer i:hover {
+    -webkit-filter: grayscale(0);
     filter: grayscale(0);
     opacity: 1;
     color: #313131;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
 .description-how {
     margin-top: 70px;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
 }
 
@@ -496,5 +564,7 @@ footer i:hover {
 
 .parallax-onmousemove img {
     height: 120vh;
+    -webkit-transform: scale(1.3) translateX(-20px) translateY(40px);
+    -ms-transform: scale(1.3) translateX(-20px) translateY(40px);
     transform: scale(1.3) translateX(-20px) translateY(40px);
 }
