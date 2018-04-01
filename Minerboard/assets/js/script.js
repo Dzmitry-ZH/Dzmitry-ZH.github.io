@@ -91,4 +91,4 @@ var parallaxInstance = new Parallax(scene, {
     relativeInput: true
 });
 
-parallaxInstance.friction(0.1);
+parallaxInstance.invert = (false, false);
