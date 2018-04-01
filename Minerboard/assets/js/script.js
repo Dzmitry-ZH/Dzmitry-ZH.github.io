@@ -85,3 +85,10 @@ sr.reveal('.contacts-animate', {
     scale: 1,
     easing: 'ease-out'
 });
+
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene, {
+    relativeInput: true
+});
+
+parallaxInstance.friction(0.1);
