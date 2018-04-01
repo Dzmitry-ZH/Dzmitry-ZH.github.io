@@ -9,19 +9,19 @@ $(window).on('load', function () {
     $preloader.fadeOut(1000);
 });
 
-$(".background").interactive_bg({
-    strength: 20,
-    scale: 1.05,
-    animationSpeed: ".5s",
-    contain: true,
-    wrapContent: false
-});
-
-$(window).resize(function () {
-    $(".background > .ibg-bg").css({
-        width: $(window).outerWidth()
-    })
-})
+// $(".background").interactive_bg({
+//     strength: 20,
+//     scale: 1.05,
+//     animationSpeed: ".5s",
+//     contain: true,
+//     wrapContent: false
+// });
+//
+// $(window).resize(function () {
+//     $(".background > .ibg-bg").css({
+//         width: $(window).outerWidth()
+//     })
+// })
 
 window.sr = ScrollReveal();
 sr.reveal('.enter', {
@@ -87,8 +87,4 @@ sr.reveal('.contacts-animate', {
 });
 
 var scene = document.getElementById('scene');
-var parallaxInstance = new Parallax(scene, {
-    relativeInput: true
-});
-
-parallaxInstance.invert = (false, false);
+var parallaxInstance = new Parallax(scene, {});
